@@ -1,0 +1,37 @@
+<body>
+    <table>
+      <colgroup>
+        <col id="col">
+        </col>
+    </colgroup>
+  </table>
+  <style media="screen">
+    iframe {
+      content: url(https://abc.xyz);
+    }
+  </style>
+  <script>
+window.onclick = () => {
+  let selection = document.getSelection()
+  var d = document.createElement('input')
+  d.select()
+  let f = document.getElementById('col').appendChild(document.createElement('iframe'))
+  f.onwebkitfullscreenchange = () => {
+    console.log(this)
+  }
+  // let loc = f.contentWindow.location
+  f.onload = function () {
+    f.webkitRequestFullScreen()
+    selection.containsNode(f)
+    console.log(this)
+    this.webkitRequestFullScreen()
+    selection.containsNode(this)
+    this.onwebkitfullscreenchange = () => {
+      console.log(this)
+    }
+  }
+  f.src =   'data:text/html,' +`<iframe></iframe>`
+  window.f = f
+}
+  </script>
+</body>

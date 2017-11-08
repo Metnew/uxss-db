@@ -1,2 +1,4 @@
 # uxss-db
-UXSS DB
+UXSS (SOP BYPASS)
+
+### Webkit see `/webkit` folder

