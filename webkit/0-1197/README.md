@@ -85,3 +85,5 @@ let it = setInterval(() => {
 </body>
 </html>
 ```
+
+Link: https://bugs.chromium.org/p/project-zero/issues/detail?id=1197

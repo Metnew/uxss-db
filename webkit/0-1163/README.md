@@ -1,4 +1,5 @@
 # UXSS via Document::prepareForDestruction and CachedFrame
+
 ### Reported by lokihardt@google.com, Mar 3 2017
 
 Here's a snippet of Document::prepareForDestruction
@@ -14,13 +15,12 @@ void Document::prepareForDestruction()
     m_hasPreparedForDestruction = true;
 }
 ```
-`Document::prepareForDestruction` is called on the assumption that the document will not be used again with its frame. However, if a frame caching is made in `Document::prepareForDestruction`, the document's frame will be stored in a CachedFrame object that will reattach the frame at some point, and thereafter, the document's frame will be never detached due to `m_hasPreparedForDestruction`.
 
+`Document::prepareForDestruction` is called on the assumption that the document will not be used again with its frame. However, if a frame caching is made in `Document::prepareForDestruction`, the document's frame will be stored in a CachedFrame object that will reattach the frame at some point, and thereafter, the document's frame will be never detached due to `m_hasPreparedForDestruction`.
 
 PoC:
 
 ```html
-
 <body>
 Click anywhere.
 <script>
@@ -84,4 +84,4 @@ window.onclick = () => {
 </body>
 ```
 
-https://bugs.chromium.org/p/project-zero/issues/detail?id=1163
+Link: https://bugs.chromium.org/p/project-zero/issues/detail?id=1163

@@ -40,4 +40,4 @@ f.src = 'https://abc.xyz/';
 </body>
 ```
 
-https://bugs.chromium.org/p/project-zero/issues/detail?id=1094
+Link: https://bugs.chromium.org/p/project-zero/issues/detail?id=1094
