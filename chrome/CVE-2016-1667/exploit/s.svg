@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<iframe xmlns="http://www.w3.org/1999/xhtml"></iframe>
+<script>
+frames[0].onunload = function() {
+  frames[0].frameElement.appendChild(top.c);
+}
+</script>
+<element a="1" a="2" />
+</svg>

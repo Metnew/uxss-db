@@ -1,0 +1,14 @@
+<!doctype html>
+<body style="background-color: white;">
+This is a sandboxed iframe that is able to set the parent's background color to red.
+<script>
+var parent_Promise = fetch.call(parent).constructor;
+var parent_Function = parent_Promise.constructor;
+new parent_Promise(function(resolve) {
+  resolve();
+}).then(function() {
+  var f = new parent_Function("document.body.style.backgroundColor = 'red';");
+  f();
+});
+</script>
+</body>

