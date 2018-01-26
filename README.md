@@ -32,7 +32,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [0-1084](./webkit/0-1084) | UXSS via `PrototypeMap::createEmptyStructure` | 10.0.2 | Jan 17 2017
 | [CVE-2017-2445](./webkit/CVE-2017-2445) | UXSS via disconnectSubframes | 10.0.2 | Jan 9 2017 |
 | [CVE-2017-2442](./webkit/CVE-2017-2442) | UXSS with `JSCallbackData` | 10.0.2? | Jan 3 2017
-| [CVE-2017-2367](./webkit/CVE-2017-2367) | UXSS by accessing a named property from an unloaded window | 10.0.2(12602.3.12.0.1) | Dec 23 2016 |
+| [CVE-2017-2367](./webkit/CVE-2017-2367) | UXSS by accessing a named property from an unloaded window | 10.0.2 | Dec 23 2016 |
 | [CVE-2017-2365](./webkit/CVE-2017-2365) | UXSS via `Frame::setDocument` | 10.0.2 | Dec 20 2016 |
 | [CVE-2017-2364](./webkit/CVE-2017-2364) | UXSS via `Frame::setDocument` (1). | 10.0.2 | Dec 20 2016 |
 | [CVE-2017-2363](./webkit/CVE-2017-2363) | UXSS via `FrameLoader::clear` | 10.0.2 | Dec 19 2016 |
@@ -40,17 +40,17 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 ### Chrome:
 | CVE/id  | title  | version  | date |
-|---------- |--------- | --------- |
-| [CVE-2017-5007](./chrome/CVE-2017-5007) | Universal XSS through bypassing `ScopedPageSuspender` with closing windows | Chrome 55 | Dec 5 2016
-| [CVE-2016-5207](./chrome/CVE-2016-5207) | Universal XSS via fullscreen element updates | Chrome 54 | Oct 14 2016
-| [CVE-2016-5204](./chrome/CVE-2016-5204) | Universal XSS by intercepting a UA shadow tree | Chrome 52 | Jul 24 2016
-| [CVE-2016-1676](./chrome/CVE-2016-1676) | Persistent UXSS via `SchemaRegistry` | Chrome 50 | Apr 19 2016
-| [CVE-2016-1674](./chrome/CVE-2016-1674) | Universal XSS via the interception of `Binding` with `Object.prototype.create` | Chrome 49 | Mar 26 2016
-| [CVE-2016-1667](./chrome/CVE-2016-1667) | Universal XSS through adopting image elements | Chrome 50 | Apr 21 2016
-| [CVE-2016-1631](./chrome/CVE-2016-1631) | Universal XSS using Flash message loop | Chrome 47 | Dec 14 2015
-| [cr-656274](./chrome/cr-656274) | Cross-origin object leak via `fetch` | 56 Canary | Oct 15 2016
+|---------|------- | -------- |----- |
+| [CVE-2017-5007](./chrome/CVE-2017-5007) | Universal XSS through bypassing `ScopedPageSuspender` with closing windows | Chrome 55 | Dec 5 2016 |
+| [CVE-2016-5207](./chrome/CVE-2016-5207) | Universal XSS via fullscreen element updates | Chrome 54 | Oct 14 2016 |
+| [CVE-2016-5204](./chrome/CVE-2016-5204) | Universal XSS by intercepting a UA shadow tree | Chrome 52 | Jul 24 2016 |
+| [CVE-2016-1676](./chrome/CVE-2016-1676) | Persistent UXSS via `SchemaRegistry` | Chrome 50 | Apr 19 2016 |
+| [CVE-2016-1674](./chrome/CVE-2016-1674) | Universal XSS via the interception of `Binding` with `Object.prototype.create` | Chrome 49 | Mar 26 2016 |
+| [CVE-2016-1667](./chrome/CVE-2016-1667) | Universal XSS through adopting image elements | Chrome 50 | Apr 21 2016 |
+| [CVE-2016-1631](./chrome/CVE-2016-1631) | Universal XSS using Flash message loop | Chrome 47 | Dec 14 2015 |
+| [cr-656274](./chrome/cr-656274) | Cross-origin object leak via `fetch` | 56 Canary | Oct 15 2016 |
 | [cr-594383](./chrome/cr-594383) | UXSS via window.open() via `file://` pages | ? | Oct 15 2016 |
-| [CVE-2015-6765](./chrome/CVE-2015-6765) | Universal XSS via `ContainerNode::parserInsertBefore` | Chrome 44 | Aug 11 2015
+| [CVE-2015-6765](./chrome/CVE-2015-6765) | Universal XSS via `ContainerNode::parserInsertBefore` | Chrome 44 | Aug 11 2015 |
 
 ### IE:
 | CVE/id  | version/date  | reporter  |
