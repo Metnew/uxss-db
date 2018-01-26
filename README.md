@@ -23,8 +23,12 @@ Some CVE ids were not found:
 | [CVE-2017-2445](./webkit/CVE-2017-2445) | | |
 | [CVE-2017-2442](./webkit/CVE-2017-2442) | | |
 | [CVE-2017-2367](./webkit/CVE-2017-2367) | | |
+| [CVE-2017-2365](./webkit/CVE-2017-2365) | | |
+| [CVE-2017-2364](./webkit/CVE-2017-2364) | | |
+| [CVE-2017-2363](./webkit/CVE-2017-2363) | | |
 | [0-1197](./webkit/0-1197)| | |
 | [0-1163](./webkit/0-1163)| | |
+| [0-1134](./webkit/0-1134)| | |
 | [0-1132](./webkit/0-1132)| | |
 | [0-1094](./webkit/0-1094)| | |
 | [0-1084](./webkit/0-1084)| | |
@@ -44,7 +48,18 @@ Some CVE ids were not found:
 | [cr-656274](./chrome/cr-656274) | | |
 | [cr-594383](./chrome/cr-594383) | | |
 
+### IE:
+| CVE/id  | version/date  | reporter  |
+|---------- |--------- | --------- |
+| [CVE-2015-0072](https://github.com/dbellavista/uxss-poc), [1](https://github.com/wjessop/UXSS_PoC) | | |
+
+
 ### Articles:
-- (RU) [Комикс о UXSS в Safari и Chrome](https://bo0om.ru/chrome-and-safari-uxss)
--
--
+- (RU) [Комикс о UXSS в Safari и Chrome](https://bo0om.ru/chrome-and-safari-uxss) - CVE-2017-5124 + CVE-2017-7089
+- [Analysis on Internet Explorer's UXSS](https://blog.innerht.ml/ie-uxss/) - CVE-2015-0072
+
+### Author
+Vladimir Metnew <vladimirmetnew@gmail.com>
+
+### LICENSE
+MIT
