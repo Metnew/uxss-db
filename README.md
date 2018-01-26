@@ -14,6 +14,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 | CVE/id    | title  | version | date  |
 |---------- |------- | ------- | ----- |
+| [CVE-2017-7089](https://github.com/Bo0oM/CVE-2017-7089) | UXSS via `parent-tab://` | 10? | September 20, 2017
 | [CVE-2017-7037](./webkit/CVE-2017-7037) | UXSS via JSObject::putInlineSlow and JSValue::putToPrimitive |  10? | Mar 10 2017 |
 | [0-1197](./webkit/0-1197) | WebKit: UXSS via CachedFrameBase::restore | 10? | Mar 17 2017
 | [CVE-2017-2528](./webkit/CVE-2017-2528) | UXSS: CachedFrame doesn't detach openers | 10? | Mar 10 2017 |
