@@ -1,5 +1,7 @@
 # uxss-db
 
+**Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
+
 ## [UXSS](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/) ([SOP](https://en.wikipedia.org/wiki/Same-origin_policy) BYPASS)
 
 > UXSS is a type of attack that exploits client-side vulnerabilities in the browser or browser extensions in order to generate an XSS condition, and execute malicious code. When such vulnerabilities are found and exploited, the behavior of the browser is affected and its security features may be bypassed or disabled.
@@ -12,9 +14,9 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 ### Webkit
 
-| CVE/id          | title  | version | date  |
-|---------------- |------- | ------- | ----- |
-| [CVE-2017-7089](https://github.com/Bo0oM/CVE-2017-7089) | UXSS via `parent-tab://` | 10? | September 20, 2017
+| CVE/id                 | title  | version | date  |
+|----------------------- |------- | ------- | ----- |
+| [CVE-2017-7089](https://github.com/Bo0oM/CVE-2017-7089) | UXSS via `parent-tab://` | 10? | Sep 20, 2017
 | [CVE-2017-7037](./webkit/CVE-2017-7037) | UXSS via `JSObject::putInlineSlow` and `JSValue::putToPrimitive` |  10? | Mar 10 2017 |
 | [0-1197](./webkit/0-1197) | WebKit: UXSS via `CachedFrameBase::restore` | 10? | Mar 17 2017
 | [CVE-2017-2528](./webkit/CVE-2017-2528) | UXSS: `CachedFrame` doesn't detach openers | 10? | Mar 10 2017 |
@@ -39,8 +41,8 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 
 ### Chrome:
-| CVE/id          | title  | version  | date |
-|-----------------|------- | -------- |----- |
+| CVE/id                 | title  | version  | date |
+|------------------------|------- | -------- |----- |
 | [CVE-2017-5007](./chrome/CVE-2017-5007) | Universal XSS through bypassing `ScopedPageSuspender` with closing windows | Chrome 55 | Dec 5 2016 |
 | [CVE-2016-5207](./chrome/CVE-2016-5207) | Universal XSS via fullscreen element updates | Chrome 54 | Oct 14 2016 |
 | [CVE-2016-5204](./chrome/CVE-2016-5204) | Universal XSS by intercepting a UA shadow tree | Chrome 52 | Jul 24 2016 |
