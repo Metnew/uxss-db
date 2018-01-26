@@ -14,4 +14,4 @@ function fsBypass(element) {
 </script>
 ```
 
-https://bugs.chromium.org/p/chromium/issues/detail?id=594383
+Link: https://bugs.chromium.org/p/chromium/issues/detail?id=594383

