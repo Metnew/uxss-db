@@ -4,7 +4,7 @@
 
 ## [UXSS](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/) ([SOP](https://en.wikipedia.org/wiki/Same-origin_policy) BYPASS)
 
-> UXSS is a type of attack that exploits client-side vulnerabilities in the browser or browser extensions in order to generate an XSS condition, and execute malicious code. When such vulnerabilities are found and exploited, the behavior of the browser is affected and its security features may be bypassed or disabled.
+> UXSS (Universal Cross-site Scripting) is a type of attack that exploits client-side vulnerabilities in the browser or browser extensions in order to generate an XSS condition, and execute malicious code. When such vulnerabilities are found and exploited, the behavior of the browser is affected and its security features may be bypassed or disabled.
 
 Some CVE ids were not found:
 - **"0-$$$$"** - an issue with id *$$$$* in [google project zero tracker](https://bugs.chromium.org/p/project-zero/issues/list)
@@ -41,18 +41,23 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 
 ### Chrome:
-| CVE/id                 | title  | version  | date |
-|------------------------|------- | -------- |----- |
-| [CVE-2017-5007](./chrome/CVE-2017-5007) | Universal XSS through bypassing `ScopedPageSuspender` with closing windows | Chrome 55 | Dec 5 2016 |
-| [CVE-2016-5207](./chrome/CVE-2016-5207) | Universal XSS via fullscreen element updates | Chrome 54 | Oct 14 2016 |
-| [CVE-2016-5204](./chrome/CVE-2016-5204) | Universal XSS by intercepting a UA shadow tree | Chrome 52 | Jul 24 2016 |
+| CVE/id                                  | title             | version  | date |
+|---------------------------------------- |------------------ |--------- |----- |
+| [CVE-2017-5007](./chrome/CVE-2017-5007) | UXSS through bypassing `ScopedPageSuspender` with closing windows | Chrome 55 | Dec 5 2016 |
+| [cr-656274](./chrome/cr-656274)         | Cross-origin object leak via `fetch` | 56 Canary | Oct 15 2016 |
+| [cr-594383](./chrome/cr-594383)         | UXSS via window.open() via `file://` pages | Chrome 54? | Oct 15 2016 |
+| [CVE-2016-5207](./chrome/CVE-2016-5207) | UXSS via fullscreen element updates | Chrome 54 | Oct 14 2016 |
+| [CVE-2016-5204](./chrome/CVE-2016-5204) | UXSS by intercepting a UA shadow tree | Chrome 52 | Jul 24 2016 |
 | [CVE-2016-1676](./chrome/CVE-2016-1676) | Persistent UXSS via `SchemaRegistry` | Chrome 50 | Apr 19 2016 |
-| [CVE-2016-1674](./chrome/CVE-2016-1674) | Universal XSS via the interception of `Binding` with `Object.prototype.create` | Chrome 49 | Mar 26 2016 |
-| [CVE-2016-1667](./chrome/CVE-2016-1667) | Universal XSS through adopting image elements | Chrome 50 | Apr 21 2016 |
-| [CVE-2016-1631](./chrome/CVE-2016-1631) | Universal XSS using Flash message loop | Chrome 47 | Dec 14 2015 |
-| [cr-656274](./chrome/cr-656274) | Cross-origin object leak via `fetch` | 56 Canary | Oct 15 2016 |
-| [cr-594383](./chrome/cr-594383) | UXSS via window.open() via `file://` pages | ? | Oct 15 2016 |
-| [CVE-2015-6765](./chrome/CVE-2015-6765) | Universal XSS via `ContainerNode::parserInsertBefore` | Chrome 44 | Aug 11 2015 |
+| [CVE-2016-1667](./chrome/CVE-2016-1667) | UXSS through adopting image elements | Chrome 50 | Apr 21 2016 |
+| [CVE-2016-1674](./chrome/CVE-2016-1674) | UXSS via the interception of `Binding` with `Object.prototype.create` | Chrome 49 | Mar 26 2016 |
+| [CVE-2016-1673](./chrome/CVE-2016-1673) | UXSS using a FrameNavigationDisabler bypass | Chrome 49 | Mar 24 2016 |
+| [CVE-2016-1631](./chrome/CVE-2016-1631) | UXSS using Flash message loop | Chrome 47 | Dec 14 2015 |
+| [CVE-2015-6770](./chrome/CVE-2015-6770) | UXSS using document.adoptNode | Chrome 45 | Oct 8 2015 |
+| [CVE-2015-6769](./chrome/CVE-2015-6769) | UXSS via the unload_event module | Chrome 45 | Sep 22 2015 |
+| [CVE-2015-6765](./chrome/CVE-2015-6765) | UXSS via `ContainerNode::parserInsertBefore` | Chrome 44 | Aug 11 2015 |
+| [CVE-2015-1268](./chrome/CVE-2015-1268) | UXSS using IDBKeyRange static methods | Chrome 43 | May 31 2015 |
+
 
 ### IE:
 | CVE/id  | version/date  | reporter  |
