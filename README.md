@@ -23,19 +23,19 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2017-2508](./webkit/CVE-2017-2508) | UXSS via ContainerNode::parserInsertBefore | 10?  | Feb 24 2017 |
 | [0-1134](./webkit/0-1134) | UXSS via `ContainerNode::parserRemoveChild` (2) | 10? | Feb 17 2017 |
 | [0-1132](./webkit/0-1132) | UXSS: the patch of #1110 made another bug | 10? | Feb 16 2017 |
-| [CVE-2017-2504](./webkit/CVE-2017-2504) | UXSS via `Editor::Command::execute` | 10.0.3(12602.4.8) | Feb 16 2017 |
+| [CVE-2017-2504](./webkit/CVE-2017-2504) | UXSS via `Editor::Command::execute` | 10.0.3 | Feb 16 2017 |
 | [CVE-2017-2493](./webkit/CVE-2017-2493) | UXSS through `HTMLObjectElement::updateWidget` | 10? | Feb 9 2017 |
-| [CVE-2017-2480](./webkit/CVE-2017-2480) | UXSS via a synchronous page load | 10.0.3(12602.4.8) | Feb 9 2017 |
-| [CVE-2017-2479](./webkit/CVE-2017-2479) | UXSS via a focus event and a link element | 10.0.3(12602.4.8) | Feb 9 2017 |
-| [CVE-2017-2475](./webkit/CVE-2017-2475) | UXSS via `ContainerNode::parserRemoveChild` | 10.0.3(12602.4.8) | Feb 2 2017 |
-| [0-1094](./webkit/0-1094) | UXSS via `operationSpreadGeneric` | Nighly 10.0.2(12602.3.12.0.1, r210957) | Jan 20 2017 |
-| [0-1084](./webkit/0-1084) | UXSS via `PrototypeMap::createEmptyStructure` | Safari 10.0.2(12602.3.12.0.1) | Jan 17 2017
-| [CVE-2017-2445](./webkit/CVE-2017-2445) | UXSS via disconnectSubframes | 10.0.2(12602.3.12.0.1) | Jan 9 2017 |
-| [CVE-2017-2442](./webkit/CVE-2017-2442) | UXSS with `JSCallbackData` | 10.0.2(12602.3.12.0.1)? | Jan 3 2017
+| [CVE-2017-2480](./webkit/CVE-2017-2480) | UXSS via a synchronous page load | 10.0.3 | Feb 9 2017 |
+| [CVE-2017-2479](./webkit/CVE-2017-2479) | UXSS via a focus event and a link element | 10.0.3 | Feb 9 2017 |
+| [CVE-2017-2475](./webkit/CVE-2017-2475) | UXSS via `ContainerNode::parserRemoveChild` | 10.0.3 | Feb 2 2017 |
+| [0-1094](./webkit/0-1094) | UXSS via `operationSpreadGeneric` | Nighly 10.0.2 | Jan 20 2017 |
+| [0-1084](./webkit/0-1084) | UXSS via `PrototypeMap::createEmptyStructure` | 10.0.2 | Jan 17 2017
+| [CVE-2017-2445](./webkit/CVE-2017-2445) | UXSS via disconnectSubframes | 10.0.2 | Jan 9 2017 |
+| [CVE-2017-2442](./webkit/CVE-2017-2442) | UXSS with `JSCallbackData` | 10.0.2? | Jan 3 2017
 | [CVE-2017-2367](./webkit/CVE-2017-2367) | UXSS by accessing a named property from an unloaded window | 10.0.2(12602.3.12.0.1) | Dec 23 2016 |
-| [CVE-2017-2365](./webkit/CVE-2017-2365) | UXSS via `Frame::setDocument` | 10.0.2(12602.3.12.0.1) | Dec 20 2016 |
-| [CVE-2017-2364](./webkit/CVE-2017-2364) | UXSS via `Frame::setDocument` (1). | 10.0.2(12602.3.12.0.1) | Dec 20 2016 |
-| [CVE-2017-2363](./webkit/CVE-2017-2363) | UXSS via `FrameLoader::clear` | 10.0.2(12602.3.12.0.1) | Dec 19 2016 |
+| [CVE-2017-2365](./webkit/CVE-2017-2365) | UXSS via `Frame::setDocument` | 10.0.2 | Dec 20 2016 |
+| [CVE-2017-2364](./webkit/CVE-2017-2364) | UXSS via `Frame::setDocument` (1). | 10.0.2 | Dec 20 2016 |
+| [CVE-2017-2363](./webkit/CVE-2017-2363) | UXSS via `FrameLoader::clear` | 10.0.2 | Dec 19 2016 |
 
 
 ### Chrome:
