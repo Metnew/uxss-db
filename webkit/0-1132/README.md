@@ -1,5 +1,6 @@
 # UXSS: the patch of #1110 made another bug
-### Reported by lokihardt@google.com, Feb 16 2017
+
+### Reported by <lokihardt@google.com>, Feb 16 2017
 
 Here's the patch of #1110.
 https://trac.webkit.org/changeset/212218/trunk/Source/WebCore/dom/ContainerNode.cpp
@@ -15,6 +16,7 @@ void ContainerNode::parserRemoveChild(Node& oldChild)
 (a) was added for the fix. But in |disconnectSubframesIfNeeded|, which fires unload event handlers, |oldChild|'s parent may be replaced. As a result, subframes of |oldChild| will be not detached.
 
 PoC:
+
 ```html
 <body>
     <div>
@@ -57,4 +59,4 @@ document.documentElement.appendChild(document.createElementNS('http://www.w3.org
 </body>
 ```
 
-https://bugs.chromium.org/p/project-zero/issues/detail?id=1132
+Link: https://bugs.chromium.org/p/project-zero/issues/detail?id=1132
