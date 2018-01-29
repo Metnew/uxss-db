@@ -22,7 +22,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2017-2528](./webkit/CVE-2017-2528) | UXSS: `CachedFrame` doesn't detach openers | 10? | Mar 10 2017 |
 | [0-1163](./webkit/0-1163) | UXSS via `Document::prepareForDestruction` and CachedFrame | 10? | Mar 3 2017 |
 | [CVE-2017-2510](./webkit/CVE-2017-2510) | UXSS: `enqueuePageshowEvent` and `enqueuePopstateEvent` don't enqueue, but dispatch | 10? | Feb 27 2017 |
-| [CVE-2017-2508](./webkit/CVE-2017-2508) | UXSS via ContainerNode::parserInsertBefore | 10?  | Feb 24 2017 |
+| [CVE-2017-2508](./webkit/CVE-2017-2508) | UXSS via `ContainerNode::parserInsertBefore` | 10?  | Feb 24 2017 |
 | [0-1134](./webkit/0-1134) | UXSS via `ContainerNode::parserRemoveChild` (2) | 10? | Feb 17 2017 |
 | [0-1132](./webkit/0-1132) | UXSS: the patch of #1110 made another bug | 10 | Feb 16 2017 |
 | [CVE-2017-2504](./webkit/CVE-2017-2504) | UXSS via `Editor::Command::execute` | 10.0.3 | Feb 16 2017 |
@@ -52,14 +52,15 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2016-1676](./chrome/CVE-2016-1676) | Persistent UXSS via `SchemaRegistry` | Chrome 50 | Apr 19 2016 |
 | [CVE-2016-1667](./chrome/CVE-2016-1667) | UXSS through adopting image elements | Chrome 50 | Apr 21 2016 |
 | [CVE-2016-1674](./chrome/CVE-2016-1674) | UXSS via the interception of `Binding` with `Object.prototype.create` | Chrome 49 | Mar 26 2016 |
-| [CVE-2016-1673](./chrome/CVE-2016-1673) | UXSS using a FrameNavigationDisabler bypass | Chrome 49 | Mar 24 2016 |
-| [cr-583445]('./chrome/cr-583445')       | UXSS in DocumentLoader::createWriterFor | Chrome 48 | Feb 2 2016 |
+| [CVE-2016-1673](./chrome/CVE-2016-1673) | UXSS using a `FrameNavigationDisabler` bypass | Chrome 49 | Mar 24 2016 |
+| [cr-583445]('./chrome/cr-583445')       | UXSS in `DocumentLoader::createWriterFor` | Chrome 48 | Feb 2 2016 |
 | [CVE-2016-1631](./chrome/CVE-2016-1631) | UXSS using Flash message loop | Chrome 47 | Dec 14 2015 |
-| [CVE-2015-6770](./chrome/CVE-2015-6770) | UXSS using document.adoptNode | Chrome 45 | Oct 8 2015 |
-| [CVE-2015-6769](./chrome/CVE-2015-6769) | UXSS via the unload_event module | Chrome 45 | Sep 22 2015 |
+| [CVE-2015-6770](./chrome/CVE-2015-6770) | UXSS using `document.adoptNode` | Chrome 45 | Oct 8 2015 |
+| [CVE-2015-6769](./chrome/CVE-2015-6769) | UXSS via the `unload_event` module | Chrome 45 | Sep 22 2015 |
 | [CVE-2015-6765](./chrome/CVE-2015-6765) | UXSS via `ContainerNode::parserInsertBefore` | Chrome 44 | Aug 11 2015 |
 | [CVE-2015-1268](./chrome/CVE-2015-1268) | UXSS using IDBKeyRange static methods | Chrome 43 | May 31 2015 |
-| [CVE-2015-1268](./chrome/CVE-2015-1268) | UXSS using IDBKeyRange static methods | Chrome 43 | May 31 2015 |
+| [CVE-2014-1701](./chrome/CVE-2014-1701) | UXSS via `dispatchEvent` on iframes | Chrome 32 | Feb 11 2014 |
+| [CVE-2011-3243](./chrome/CVE-2011-3243) | Universal XSS using `contentWindow.eval` | Chrome 12 | May 24 2011 |
 | [cr-37383]('./chrome/cr-37383')         | `javascript:` url with a leading NULL byte can bypass cross origin protection. | Chrome ? | Mar 4 2010 |
 
 
