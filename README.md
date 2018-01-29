@@ -72,6 +72,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 ### Articles:
 - (RU) [Комикс о UXSS в Safari и Chrome](https://bo0om.ru/chrome-and-safari-uxss) - CVE-2017-5124 + CVE-2017-7089
 - [Analysis on Internet Explorer's UXSS](https://blog.innerht.ml/ie-uxss/) - CVE-2015-0072
+- [Universal XSS via Evernote WebClipper](https://blog.xpnsec.com/evernote-webclipper-uxss/)
 
 ### Author
 Vladimir Metnew <vladimirmetnew@gmail.com>
