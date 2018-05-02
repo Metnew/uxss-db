@@ -87,8 +87,10 @@ MIT
 
 
 #### Notes:
+
 How to start hacking? You need:
+
 - Knowledge of C++, memory management and memory corruptions
 - Compiled Webkit/Chromium/FF sources with ASAN
 - Source code review + previous vulnerabilities
-- Fuzzer won't help you find UXSS
+- Fuzzer possibly won't help you find UXSS. Unless it's not UXSS-aimed fuzzer.
