@@ -60,6 +60,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2015-6769](./chrome/CVE-2015-6769) | UXSS via the `unload_event` module | 45 | Sep 22 2015 |
 | [CVE-2015-6765](./chrome/CVE-2015-6765) | UXSS via `ContainerNode::parserInsertBefore` | 44 | Aug 11 2015 |
 | [CVE-2015-1268](./chrome/CVE-2015-1268) | UXSS using IDBKeyRange static methods | 43 | May 31 2015 |
+| [CVE-2014-1747](./chrome/CVE-2014-1701) | UXSS via local MHTML file | 35 | Dec 25 2013 |
 | [CVE-2014-1701](./chrome/CVE-2014-1701) | UXSS via `dispatchEvent` on iframes | 32 | Feb 11 2014 |
 | [CVE-2011-2856](./chrome/CVE-2011-2856) | Arbitrary cross-origin bypass using `__defineGetter__` prototype override | 15 | Aug 18 2011 |
 | [CVE-2011-3243](./chrome/CVE-2011-3243) | Universal XSS using `contentWindow.eval` | 12 | May 24 2011 |
