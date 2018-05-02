@@ -41,6 +41,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 
 ### Chrome:
+
 | CVE/id                                  | title             | version  | date |
 |---------------------------------------- |------------------ |--------- |----- |
 | [CVE-2017-5124](https://github.com/Bo0oM/CVE-2017-5124) | UXSS with MHTML  | 61 | Oct 20 2017 |
@@ -60,7 +61,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2015-6769](./chrome/CVE-2015-6769) | UXSS via the `unload_event` module | 45 | Sep 22 2015 |
 | [CVE-2015-6765](./chrome/CVE-2015-6765) | UXSS via `ContainerNode::parserInsertBefore` | 44 | Aug 11 2015 |
 | [CVE-2015-1268](./chrome/CVE-2015-1268) | UXSS using IDBKeyRange static methods | 43 | May 31 2015 |
-| [CVE-2014-1747](./chrome/CVE-2014-1701) | UXSS via local MHTML file | 35 | Dec 25 2013 |
+| [CVE-2014-1747](./chrome/CVE-2014-1747) | UXSS via local MHTML files | 35 | Dec 25 2013 |
 | [CVE-2014-1701](./chrome/CVE-2014-1701) | UXSS via `dispatchEvent` on iframes | 32 | Feb 11 2014 |
 | [CVE-2011-2856](./chrome/CVE-2011-2856) | Arbitrary cross-origin bypass using `__defineGetter__` prototype override | 15 | Aug 18 2011 |
 | [CVE-2011-3243](./chrome/CVE-2011-3243) | Universal XSS using `contentWindow.eval` | 12 | May 24 2011 |
@@ -68,25 +69,29 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 
 ### IE:
+
 | CVE/id  | version/date  | reporter  |
 |---------- |--------- | --------- |
 | [CVE-2015-0072](https://github.com/dbellavista/uxss-poc), [alternative PoC](https://github.com/wjessop/UXSS_PoC) | | |
 
 
 ### Articles:
+
 - (RU) [Комикс о UXSS в Safari и Chrome](https://bo0om.ru/chrome-and-safari-uxss) - CVE-2017-5124 + CVE-2017-7089
 - [Analysis on Internet Explorer's UXSS](https://blog.innerht.ml/ie-uxss/) - CVE-2015-0072
 - [Universal XSS via Evernote WebClipper](https://blog.xpnsec.com/evernote-webclipper-uxss/)
 - [Mobile Browsers Security: iOS](https://www.syscan360.org/slides/2014_EN_MobileBrowsersSecurityiOS_LukaszPilorzPawelWylecial.pdf)
 
 ### Author
+
 Vladimir Metnew <vladimirmetnew@gmail.com>
 
 ### LICENSE
+
 MIT
 
 
-#### Notes:
+#### Notes
 
 How to start hacking? You need:
 
