@@ -77,9 +77,18 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 - (RU) [Комикс о UXSS в Safari и Chrome](https://bo0om.ru/chrome-and-safari-uxss) - CVE-2017-5124 + CVE-2017-7089
 - [Analysis on Internet Explorer's UXSS](https://blog.innerht.ml/ie-uxss/) - CVE-2015-0072
 - [Universal XSS via Evernote WebClipper](https://blog.xpnsec.com/evernote-webclipper-uxss/)
+- [Mobile Browsers Security: iOS](https://www.syscan360.org/slides/2014_EN_MobileBrowsersSecurityiOS_LukaszPilorzPawelWylecial.pdf)
 
 ### Author
 Vladimir Metnew <vladimirmetnew@gmail.com>
 
 ### LICENSE
 MIT
+
+
+#### Notes:
+How to start hacking? You need:
+- Knowledge of C++, memory management and memory corruptions
+- Compiled Webkit/Chromium/FF sources with ASAN
+- Source code review + previous vulnerabilities
+- Fuzzer won't help you find UXSS
