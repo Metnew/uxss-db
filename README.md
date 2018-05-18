@@ -2,8 +2,6 @@
 
 **Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
 
-> Demo: [https://uxss-db.now.sh](Hosted on "zeit/now")
-
 ## [UXSS](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/) ([SOP](https://en.wikipedia.org/wiki/Same-origin_policy) BYPASS)
 
 > UXSS (Universal Cross-site Scripting) is a type of attack that exploits client-side vulnerabilities in the browser or browser extensions in order to generate an XSS condition, and execute malicious code. When such vulnerabilities are found and exploited, the behavior of the browser is affected and its security features may be bypassed or disabled.
