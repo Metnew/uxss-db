@@ -2,7 +2,7 @@
 
 **Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
 
-> Demo: [https://uxss-db.now.sh](Hosted on "zeit/now")
+<!-- > Demo: [https://uxss-db.now.sh](Hosted on "zeit/now") -->
 
 ## [UXSS](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/) ([SOP](https://en.wikipedia.org/wiki/Same-origin_policy) BYPASS)
 
@@ -42,7 +42,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2017-2364](./webkit/CVE-2017-2364)                 | UXSS via `Frame::setDocument` (1).                                                  | 10.0.2  | Dec 20 2016  |
 | [CVE-2017-2363](./webkit/CVE-2017-2363)                 | UXSS via `FrameLoader::clear`                                                       | 10.0.2  | Dec 19 2016  |
 
-### Chrome:
+### Chrome
 
 | CVE/id                                                  | title                                                                          | version     | date        |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------- | ----------- |
@@ -67,20 +67,42 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2014-1701](./chrome/CVE-2014-1701)                 | UXSS via `dispatchEvent` on iframes                                            | 32          | Feb 11 2014 |
 | [CVE-2011-2856](./chrome/CVE-2011-2856)                 | Arbitrary cross-origin bypass using `__defineGetter__` prototype override      | 15          | Aug 18 2011 |
 | [CVE-2011-3243](./chrome/CVE-2011-3243)                 | Universal XSS using `contentWindow.eval`                                       | 12          | May 24 2011 |
+| [CVE-2011-1438](./chrome/CVE-2011-1438)                 | bypass SOP with `blob:`                                                        | 11          | Mar 2 2011  |
+| [cr-74372]('./chrome/cr-74372')                         | chrome://blob-internals/ XSS                                                   | 11          | Feb 28 2011 |
 | [cr-37383]('./chrome/cr-37383')                         | `javascript:` url with a leading NULL byte can bypass cross origin protection. | ?           | Mar 4 2010  |
 
-### IE:
+### IE/Edge
 
 | CVE/id                                                                                                           | version/date | reporter |
 | ---------------------------------------------------------------------------------------------------------------- | ------------ | -------- |
 | [CVE-2015-0072](https://github.com/dbellavista/uxss-poc), [alternative PoC](https://github.com/wjessop/UXSS_PoC) |              |          |
 
-### Articles:
+### Articles
 
 * (RU) [Комикс о UXSS в Safari и Chrome](https://bo0om.ru/chrome-and-safari-uxss) - CVE-2017-5124 + CVE-2017-7089
 * [Analysis on Internet Explorer's UXSS](https://blog.innerht.ml/ie-uxss/) - CVE-2015-0072
 * [Universal XSS via Evernote WebClipper](https://blog.xpnsec.com/evernote-webclipper-uxss/)
 * [Mobile Browsers Security: iOS](https://www.syscan360.org/slides/2014_EN_MobileBrowsersSecurityiOS_LukaszPilorzPawelWylecial.pdf)
+* [SOP bypass / UXSS – Stealing Credentials Pretty Fast (Edge)](https://www.brokenbrowser.com/sop-bypass-uxss-stealing-credentials-pretty-fast/) - May 10, 2017
+* [Grabbing data from Inputs and Textareas (Edge/IE)](https://www.brokenbrowser.com/grabdatafrominput/) - Aug 28, 2016
+
+### Whitepapers
+
+* [The Definitive Guide to Same-origin Policy](https://www.netsparker.com/whitepaper-same-origin-policy/)
+* [On the Security of the SOP-DOM Using HTML and JavaScript Code](http://your-sop.com/more-stuff/subsequent-work/On_the_Security_of_the_SOP-DOM_Using_HTML_and_JavaScript_Code.pdf)
+* [Same-Origin Policy: Evaluation in Modern Browsers](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf) + [slides](https://www.usenix.org/sites/default/files/conference/protected-files/usenixsecurity17_slides_marcus_niemietz.pdf) + [talk](https://youtu.be/-dz_V0fqUnw) + [your-sop.com](http://your-sop.com)
+
+### Browser hacking guides
+
+* [The Tor Browser Hacking Guide](https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking)
+* [The Design and Implementation of the Tor Browser [DRAFT]](https://www.torproject.org/projects/torbrowser/design/)
+* []()
+
+
+### Specs
+
+[W3C Suborigins [DRAFT]](https://w3c.github.io/webappsec-suborigins/)
+[ECMA 262](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)
 
 ### Author
 
@@ -98,3 +120,35 @@ How to start hacking? You need:
 * Compiled Webkit/Chromium/FF sources with ASAN
 * Source code review + previous vulnerabilities
 * Fuzzer possibly won't help you find UXSS. Unless it's not UXSS-aimed fuzzer.
+
+#### TODO
+
+- Add "Firefox" table to README.md
+- Add "Chromodo" table to README.md
+- Add these bugs:
+    - https://www.brokenbrowser.com/revealing-the-content-of-the-address-bar-ie/
+    - https://www.brokenbrowser.com/sop-bypass-uxss-tweeting-like-charles-darwin/
+    - https://www.brokenbrowser.com/sop-bypass-abusing-read-protocol/
+    - https://www.brokenbrowser.com/microsoft-edge-detecting-installed-extensions/
+    - https://www.brokenbrowser.com/free-ticket-to-the-intranet-zone/
+    - https://www.brokenbrowser.com/uxss-ie-domainless-world/
+    - https://www.brokenbrowser.com/bypass-the-patch-to-keep-spoofing-the-address-bar-with-the-malware-warning/
+    - https://www.brokenbrowser.com/zombie-alert/
+    - https://www.brokenbrowser.com/uxss-ie-htmlfile/
+    - https://www.brokenbrowser.com/uxss-edge-domainless-world/
+    - https://www.brokenbrowser.com/abusing-of-protocols/
+    - https://www.brokenbrowser.com/loading-insecure-content-in-secure-pages/
+    - https://www.brokenbrowser.com/detecting-local-files-to-evade-analysts/
+    - https://www.brokenbrowser.com/workers-sop-bypass-importscripts-and-basehref/
+    - https://www.brokenbrowser.com/detecting-apps-mimetype-malware/
+    - https://www.brokenbrowser.com/referer-spoofing-defeating-xss-filter/
+    - https://www.brokenbrowser.com/css-history-leak/
+    - https://www.brokenbrowser.com/grabdatafrominput/
+    - https://blog.jeremiahgrossman.com/2006/08/i-know-where-youve-been.html
+    - [Pwnfest 2016 meta bug](https://bugs.chromium.org/p/chromium/issues/detail?id=664551&can=1&q=Type%3D%22Bug-Security%22%20Security_Severity%3DCritical%20&sort=-modified&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified)
+    - [Pwn2own meta bug](https://bugs.chromium.org/p/chromium/issues/detail?id=659474)
+    - [Chrome OS exploit: WebAsm, Site Isolation, crosh, crash reporter, cryptohomed](https://bugs.chromium.org/p/chromium/issues/detail?id=766253)
+    - [Full chain exploit + sandbox escape: Array.concat -> extension install -> download exec](https://bugs.chromium.org/p/chromium/issues/detail?id=386988)
+    - [Pwn2Own: content: scheme allows cross-origin info leaks](https://bugs.chromium.org/p/chromium/issues/detail?id=659489)
+    - [Use-after free in leveldb](https://bugs.chromium.org/p/chromium/issues/detail?id=88944)
+    - [Security: UaF in MidiHost round 2 (JS -> Browser code execution)](https://bugs.chromium.org/p/chromium/issues/detail?id=576383)
