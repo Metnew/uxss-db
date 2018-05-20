@@ -3,20 +3,25 @@
 > Star the repo, if it was useful for you ⭐️.
 > Any help is highly appreciated, check [TODO](#todo)!
 
-* [uxss-db](#uxss-db)
-  * [UXSS (SOP BYPASS)](#uxss-sop-bypass)
-  * [Webkit](#webkit)
-  * [Chrome](#chrome)
-  * [IE/Edge](#ie-edge)
-  * [Articles](#articles)
-  * [Whitepapers](#whitepapers)
-  * [Browser hacking guides](#browser-hacking-guides)
-  * [Specs](#specs)
-  * [Bounties](#bounties)
-    * [Author](#author)
-    * [LICENSE](#license)
-      * [Notes](#notes)
-  * [TODO](#todo)
+- [uxss-db 🔪](#uxss-db)
+  - [Intro](#intro)
+  - [Webkit](#webkit)
+  - [Chrome](#chrome)
+  - [IE/Edge](#ie-edge)
+  - [Articles](#articles)
+  - [Whitepapers](#whitepapers)
+  - [Browser hacking guides and design docs](#browser-hacking-guides-and-design-docs)
+    - [Tor](#tor)
+    - [Brave](#brave)
+    - [Chromium](#chromium)
+    - [Webkit](#webkit)
+  - [Specs](#specs)
+  - [Bounties](#bounties)
+  - [Misc](#misc)
+    - [Author](#author)
+    - [LICENSE](#license)
+      - [Notes](#notes)
+  - [TODO](#todo)
 
 **Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
 
@@ -115,10 +120,38 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 * [Same-Origin Policy: Evaluation in Modern Browsers](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-schwenk.pdf) + [slides](https://www.usenix.org/sites/default/files/conference/protected-files/usenixsecurity17_slides_marcus_niemietz.pdf) + [talk](https://youtu.be/-dz_V0fqUnw) + [your-sop.com](http://your-sop.com)
 * [Google Browser Security Handbook](https://ru.scribd.com/document/135631086/Google-Browser-Security-Handbook)
 
-## Browser hacking guides
+## Browser hacking guides and design docs
+
+### Tor
 
 * [The Tor Browser Hacking Guide](https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking)
 * [The Design and Implementation of the Tor Browser [DRAFT]](https://www.torproject.org/projects/torbrowser/design/)
+
+### Brave
+
+* [Brave browser repo](https://github.com/brave/browser-laptop)
+* [Component Structure](https://github.com/brave/browser-laptop/blob/master/docs/componentStructure.md)
+* [Directory Structure](https://github.com/brave/browser-laptop/blob/master/docs/directoryStructure.md)
+* [State](https://github.com/brave/browser-laptop/blob/master/docs/state.md) - similar to Redux state concept, but just an ImmutableJS object
+* [How to work with crashes](https://github.com/brave/browser-laptop/wiki/Crashes)
+
+### Chromium
+
+* [How Chromium Displays Web Pages](https://www.chromium.org/developers/design-documents/displaying-a-web-page-in-chrome)
+* [Chromium: Multi-process Architecture](https://www.chromium.org/developers/design-documents/multi-process-architecture)
+* [Plz Navigate: Browser-side navigation in Chrome](https://docs.google.com/document/d/1cSW8fpJIUnibQKU8TMwLE5VxYZPh4u4LNu_wtkok8UE/edit?pref=2&pli=1#)
+* [PlzNavigate: Navigation failure](https://docs.google.com/document/d/1AD1gkOO9yTuNwnNptczdlMgktoMdl0LssDbv1ECx5Co/edit#heading=h.8e8hcr1fxzjg)
+* [PlzNavigate: Speculative renderer creation](https://docs.google.com/document/d/1d3NhCFK79imXBO_S-qN16XYLS1zC5hkvL7nQclxnKP8/edit#heading=h.vno6gjwj078r)
+* [Site Isolation Design Document](https://www.chromium.org/developers/design-documents/site-isolation)
+* [Site Isolation Summit - Chromium Changes](https://docs.google.com/presentation/d/1e25K7BW3etNDm1-lkMltMcCcRDeVwLibBcbACRhqZ1k/edit#slide=id.g6ddda684b_09)
+* [Site Isolation Summit 2015](https://docs.google.com/presentation/d/10HTTK4dsxO5p6FcpEOq8EkuV4yiBx2n6dBki8cqDWyo/edit#slide=id.g6ddc3db7f_050)
+* [Site Isolation Summit - Blink Changes](https://docs.google.com/presentation/d/11nrXiuXBTC72E5l_MUtu2eJN6rcW9PtBewDOPPTk9Bc/edit#slide=id.g6dded9be5_073)
+* [Threading and Tasks in Chrome](https://chromium.googlesource.com/chromium/src/+/master/docs/threading_and_tasks.md)
+* [Important Abstractions and Data Structures](https://www.chromium.org/developers/coding-style/important-abstractions-and-data-structures)
+
+### Webkit
+
+* [Core WebKit Classes](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DisplayWebContent/Concepts/WebKitDesign.html)
 
 ## Specs
 
@@ -136,7 +169,10 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 ## Misc
 
-[NodeFuzz](https://code.google.com/archive/p/ouspg/wikis/NodeFuzz.wiki) - web browser fuzzer
+* [NodeFuzz](https://code.google.com/archive/p/ouspg/wikis/NodeFuzz.wiki) - web browser fuzzer
+* [Muon](https://github.com/brave/muon) - Build browsers and browser like applications with HTML, CSS, and JavaScript
+* https://ios.browsr-tests.com - list of SOP bypasses in iOS
+* https://github.com/rafaybaloch/SOP-Bypass-Mini-Test-Suite - list of SOP bypasses (some CVEs exist in this repo)
 
 ### Author
 
@@ -157,9 +193,8 @@ How to start hacking? You need:
 
 ## TODO
 
-<!-- * Add "Chromodo" table in README.md -->
-
-* Add "Firefox" table in README.md
+* Introduce unified way to trigger exploit, where it's possible: `window.onclick`
+* Add "Firefox" table in `README.md`
 * Find CVE or chrome tracker id for `chrome/input-type-color`
 * Add these bugs:
   * https://www.brokenbrowser.com/revealing-the-content-of-the-address-bar-ie/
@@ -195,4 +230,3 @@ How to start hacking? You need:
   * https://github.com/mpgn/ByP-SOP
   * https://blog.doyensec.com/2017/08/03/electron-framework-security.html
   * http://blog.intothesymmetry.com/2015/08/apple-safari-sop-bypass-cve-2015-3753.html
-  * https://github.com/rafaybaloch/SOP-Bypass-Mini-Test-Suite - looks like an aggregation of already added CVEs
