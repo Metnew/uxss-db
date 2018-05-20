@@ -33,9 +33,10 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2017-2480](./webkit/CVE-2017-2480)                 | UXSS via a synchronous page load                                                    | 10.0.3  | Feb 9 2017   |
 | [CVE-2017-2479](./webkit/CVE-2017-2479)                 | UXSS via a focus event and a link element                                           | 10.0.3  | Feb 9 2017   |
 | [CVE-2017-2475](./webkit/CVE-2017-2475)                 | UXSS via `ContainerNode::parserRemoveChild`                                         | 10.0.3  | Feb 2 2017   |
+| [CVE-2017-2468](./webkit/CVE-2017-2468)                 | Use-After-Free via `Document::adoptNode`                                            | 10.0.3  | Jan 23 2017  |
 | [0-1094](./webkit/0-1094)                               | UXSS via `operationSpreadGeneric`                                                   | 10.0.2  | Jan 20 2017  |
 | [0-1084](./webkit/0-1084)                               | UXSS via `PrototypeMap::createEmptyStructure`                                       | 10.0.2  | Jan 17 2017  |
-| [CVE-2017-2445](./webkit/CVE-2017-2445)                 | UXSS via disconnectSubframes                                                        | 10.0.2  | Jan 9 2017   |
+| [CVE-2017-2445](./webkit/CVE-2017-2445)                 | UXSS via `disconnectSubframes`                                                      | 10.0.2  | Jan 9 2017   |
 | [CVE-2017-2442](./webkit/CVE-2017-2442)                 | UXSS with `JSCallbackData`                                                          | 10.0.2  | Jan 3 2017   |
 | [CVE-2017-2367](./webkit/CVE-2017-2367)                 | UXSS by accessing a named property from an unloaded window                          | 10.0.2  | Dec 23 2016  |
 | [CVE-2017-2365](./webkit/CVE-2017-2365)                 | UXSS via `Frame::setDocument`                                                       | 10.0.2  | Dec 20 2016  |
@@ -47,10 +48,10 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | CVE/id                                                  | title                                                                          | version     | date        |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------- | ----------- |
 | [CVE-2017-5124](https://github.com/Bo0oM/CVE-2017-5124) | UXSS with MHTML                                                                | 61          | Oct 20 2017 |
-| [cr-687844](./chrome/cr-687844)                         | window.external leaks global object + cross origin script access               | 57          | Feb 2 2017  |
+| [cr-687844](./chrome/cr-687844)                         | `window.external` leaks global object + cross origin script access             | 57          | Feb 2 2017  |
 | [CVE-2017-5007](./chrome/CVE-2017-5007)                 | UXSS through bypassing `ScopedPageSuspender` with closing windows              | 55          | Dec 5 2016  |
 | [cr-656274](./chrome/cr-656274)                         | Cross-origin object leak via `fetch`                                           | 56 (canary) | Oct 15 2016 |
-| [cr-594383](./chrome/cr-594383)                         | UXSS via window.open() via `file://` pages                                     | 54          | Oct 15 2016 |
+| [cr-594383](./chrome/cr-594383)                         | UXSS via `window.open()` via `file://` pages                                   | 54          | Oct 15 2016 |
 | [CVE-2016-5207](./chrome/CVE-2016-5207)                 | UXSS via fullscreen element updates                                            | 54          | Oct 14 2016 |
 | [CVE-2016-5204](./chrome/CVE-2016-5204)                 | UXSS by intercepting a UA shadow tree                                          | 52          | Jul 24 2016 |
 | [CVE-2016-1676](./chrome/CVE-2016-1676)                 | Persistent UXSS via `SchemaRegistry`                                           | 50          | Apr 19 2016 |
@@ -68,7 +69,7 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 | [CVE-2011-2856](./chrome/CVE-2011-2856)                 | Arbitrary cross-origin bypass using `__defineGetter__` prototype override      | 15          | Aug 18 2011 |
 | [CVE-2011-3243](./chrome/CVE-2011-3243)                 | Universal XSS using `contentWindow.eval`                                       | 12          | May 24 2011 |
 | [CVE-2011-1438](./chrome/CVE-2011-1438)                 | bypass SOP with `blob:`                                                        | 11          | Mar 2 2011  |
-| [cr-74372]('./chrome/cr-74372')                         | chrome://blob-internals/ XSS                                                   | 11          | Feb 28 2011 |
+| [cr-74372]('./chrome/cr-74372')                         | `chrome://blob-internals/` XSS                                                 | 11          | Feb 28 2011 |
 | [cr-37383]('./chrome/cr-37383')                         | `javascript:` url with a leading NULL byte can bypass cross origin protection. | ?           | Mar 4 2010  |
 
 ### IE/Edge
@@ -96,8 +97,6 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 * [The Tor Browser Hacking Guide](https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking)
 * [The Design and Implementation of the Tor Browser [DRAFT]](https://www.torproject.org/projects/torbrowser/design/)
-* []()
-
 
 ### Specs
 
@@ -123,8 +122,9 @@ How to start hacking? You need:
 
 #### TODO
 
-- Add "Firefox" table to README.md
-- Add "Chromodo" table to README.md
+- Add "Firefox" table in README.md
+- Add "Chromodo" table in README.md
+- Find CVE or chrome tracker id for `chrome/input-type-color`
 - Add these bugs:
     - https://www.brokenbrowser.com/revealing-the-content-of-the-address-bar-ie/
     - https://www.brokenbrowser.com/sop-bypass-uxss-tweeting-like-charles-darwin/
