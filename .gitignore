@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+js-vuln-db
+js-vuln-db-js
+js-vuln-db-html
+webkit/security-tests
