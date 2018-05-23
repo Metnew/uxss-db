@@ -310,7 +310,7 @@ How to start hacking? You need:
   * format webkit/CVE-2018-4204/README.md
   * format chrome/CVE-2013-6642/README.md
   * format webkit/CVE-2013-6893
-  * missing exploit for webkit/CVE-2013-7197/README.md
+  * missing exploit for `webkit/CVE-2013-7197`
 
 Find CVEs from [domato](https://github.com/google/domato) repo:
 
