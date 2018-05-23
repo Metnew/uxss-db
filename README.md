@@ -1,7 +1,7 @@
 # uxss-db 🔪
 
 > Star the repo, if it was useful for you ⭐️.
-> Any help is highly appreciated, check [TODO](#todo)!
+> Any help is highly appreciated, 🙏 check [TODO](#todo)!
 
 - [uxss-db 🔪](#uxss-db)
   - [Intro](#intro)
@@ -11,6 +11,7 @@
   - [Articles](#articles)
   - [Whitepapers](#whitepapers)
   - [Browser hacking guides and design docs](#browser-hacking-guides-and-design-docs)
+    - [Firefox](#firefox)
     - [Tor](#tor)
     - [Brave](#brave)
     - [Chromium](#chromium)
@@ -18,27 +19,30 @@
   - [Specs](#specs)
   - [Bounties](#bounties)
   - [Misc](#misc)
-    - [Author](#author)
-    - [LICENSE](#license)
-      - [Notes](#notes)
+  - [Scripts](#scripts)
+  - [Author](#author)
+  - [LICENSE](#license)
+  - [Notes](#notes)
   - [TODO](#todo)
 
 **Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
+> You can extract `js-vuln-db` CVEs to `.html/.js` files using [Scripts](#scripts)
 
-<!-- > Demo: [https://uxss-db.now.sh](Hosted on "zeit/now") -->
+> Demo: https://uxss-db.now.sh
 
 ## Intro
 
-[What is UXSS?](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/)
-
-[What is SOP?](https://en.wikipedia.org/wiki/Same-origin_policy)
+- [What is UXSS?](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/)
+- [What is SOP?](https://en.wikipedia.org/wiki/Same-origin_policy)
+- [What is CORS?](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS)
 
 Some CVE ids were not found:
 
 * **"0-$$$$"** - an issue with id _$$$$_ in [google project zero tracker](https://bugs.chromium.org/p/project-zero/issues/list)
 * **cr-$$$$** - an issue with id _$$$$_ in [Chromium tracker](https://bugs.chromium.org/p/chromium/issues/list)
+* **some-bug** - vuln don't have CVE or CVE is unknown
 
-_Version field has "?" symbol, if detailed version wasn't attached to a report_
+_Version field has "?" symbol, if detailed version wasn't attached to the report_
 
 ## Webkit
 
@@ -122,6 +126,10 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 
 ## Browser hacking guides and design docs
 
+### Firefox
+
+* [7 Tips for Fuzzing Firefox More Effectively](https://blog.mozilla.org/security/2012/06/20/7-tips-for-fuzzing-firefox-more-effectively/)
+
 ### Tor
 
 * [The Tor Browser Hacking Guide](https://trac.torproject.org/projects/tor/wiki/doc/TorBrowser/Hacking)
@@ -172,28 +180,39 @@ _Version field has "?" symbol, if detailed version wasn't attached to a report_
 * [NodeFuzz](https://code.google.com/archive/p/ouspg/wikis/NodeFuzz.wiki) - web browser fuzzer
 * [Muon](https://github.com/brave/muon) - Build browsers and browser like applications with HTML, CSS, and JavaScript
 * https://ios.browsr-tests.com - list of SOP bypasses in iOS
-* https://github.com/rafaybaloch/SOP-Bypass-Mini-Test-Suite - list of SOP bypasses (some CVEs exist in this repo)
+* https://github.com/rafaybaloch/SOP-Bypass-Mini-Test-Suite - list of SOP bypasses (includes some CVEs from this repo)
 
-### Author
+## Scripts
+
+```bash
+  # Export `js-vuln-db` repo's CVEs to html
+  bash ./scripts/js-vuln-db-to-format.sh html
+  # Export `js-vuln-db` repo's CVEs to js
+  bash ./scripts/js-vuln-db-to-format.sh js
+```
+
+## Author
 
 Vladimir Metnew <mailto:vladimirmetnew@gmail.com>
 
-### LICENSE
+## LICENSE
 
 MIT
 
-#### Notes
+## Notes
 
 How to start hacking? You need:
 
-* Knowledge of C++, memory management and memory corruptions
-* Compiled Webkit/Chromium/FF sources with ASAN
-* Source code review + previous vulnerabilities
-* Fuzzer possibly won't help you find UXSS. Unless it's not UXSS-aimed fuzzer.
+* C++, memory management and memory corruptions background
+* Compiled Webkit/Chromium/FF sources with ASAN (for memory bugs)
+* Source code review + knowledge of previous vulnerabilities
+* Fuzzer for memory-related bugs.
+* Read some posts to understand which attack surface isn't covered enough.
 
 ## TODO
 
-* Introduce unified way to trigger exploit, where it's possible: `window.onclick`
+* RESOLVE THESE LINKS AND START USING ISSUES!
+* Introduce unified way to trigger exploit, where it's possible: `window.onclick` / `<button id="X">Click me</button>`
 * Add "Firefox" table in `README.md`
 * Find CVE or chrome tracker id for `chrome/input-type-color`
 * Add these bugs:
@@ -230,3 +249,73 @@ How to start hacking? You need:
   * https://github.com/mpgn/ByP-SOP
   * https://blog.doyensec.com/2017/08/03/electron-framework-security.html
   * http://blog.intothesymmetry.com/2015/08/apple-safari-sop-bypass-cve-2015-3753.html
+  * Download Protection Bypass: additional Microsoft Visio file-formats should get a Full Ping
+    https://bugs.chromium.org/p/chromium/issues/detail?id=771469
+  * Download Protection Bypass .html files can be modified to bypass Full Ping: https://bugs.chromium.org/p/chromium/issues/detail?id=762702
+  * https://cs.chromium.org/chromium/src/chrome/browser/resources/safe_browsing/download_file_types.asciipb
+  * https://www.cracking.com.ar/demos/edgespoof/3/
+  * http://unsafe.cracking.com.ar/demos/edgedatametadata/bing.html
+  * Table of allowed/disallowed browser hacks: like [top-level navigation to data:uri](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)
+  * [CVE-2016-9079: Use-after-free in SVG Animation](https://bugzilla.mozilla.org/show_bug.cgi?id=1321066)
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=666246
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=671328
+  * https://trac.torproject.org/projects/tor/ticket/20772
+  * http://www.cracking.com.ar/demos/workerleak/
+  * http://www.cracking.com.ar/demos/xmldom/
+  * http://unsafe.cracking.com.ar/demos/sandboxedge/
+  * https://www.cracking.com.ar/demos/sop-ax-htmlfile/injectiframexdom.html !!
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=21338
+  * http://browser-shredders.blogspot.com/
+  * http://browser-shredders.blogspot.com/2014/06/cve-not-yet-assigned-opera-coast-ssl.html
+  * [Bypassing the Same Origin Policy - The Browser Hacker&rsquo;s Handbook (2014)](http://apprize.info/security/browser/5.html)
+  * [438085 - Security: SOP bypass via DNS-Rebind (including PoC) - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=438085)
+  * [Cookie same origin policy](https://crypto.stanford.edu/cs142/lectures/10-cookie-security.pdf)
+  * [Chrome XSS Bypass - Brute XSS](https://brutelogic.com.br/blog/chrome-xss-bypass/)
+  * [same origin policy problems](http://www.securitylearn.net/tag/same-origin-policy-problems/)
+  * [demonic_browsers.pdf](https://research.aurainfosec.io/assets/demonic_browsers.pdf)
+  * [lcamtuf's blog: Announcing ref_fuzz, a 2 year old fuzzer](https://lcamtuf.blogspot.com/2010/06/announcing-reffuzz-2yo-fuzzer.html)
+  * [lcamtuf's blog: Yeah, about that address bar thing...](https://lcamtuf.blogspot.com/2010/06/yeah-about-that-address-bar-thing.html)
+  * [Multiple Browsers Fake url folder & file Same origin Spoof](http://lostmon.blogspot.com/2009/08/multiple-browsers-fake-url-folder-file.html)
+  * [lcamtuf's blog: The curse of inverse strokejacking](https://lcamtuf.blogspot.com/2010/06/curse-of-inverse-strokejacking.html)
+  * [lcamtuf.coredump.cx/webkit-focus/](http://lcamtuf.coredump.cx/webkit-focus/)
+  * [lcamtuf's blog: Safari: a tale of betrayal and revenge](https://lcamtuf.blogspot.com/2010/06/safari-tale-of-betrayal-and-revenge.html)
+  * [Full Disclosure: ...because you can't get enough of clickjacking](http://seclists.org/fulldisclosure/2010/Mar/232)
+  * [JSON hijacking for the modern web | Blog](https://portswigger.net/blog/json-hijacking-for-the-modern-web)
+  * [portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/](http://portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/)
+  * [portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/index2.html](http://portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/index2.html)
+  * [portswigger-labs.net/utf-16be/edge_steal_json_data_with_proxy/index2.php](http://portswigger-labs.net/utf-16be/edge_steal_json_data_with_proxy/index2.php)
+  * [portswigger-labs.net/utf-16be/chrome_steal_json_data_with_proxy/index2.html](http://portswigger-labs.net/utf-16be/chrome_steal_json_data_with_proxy/index2.html)
+  * [portswigger-labs.net/utf-16be/safari_steal_json_data_with_proxy/](http://portswigger-labs.net/utf-16be/safari_steal_json_data_with_proxy/)
+  * [portswigger-labs.net/utf-16be/without_proxies/](http://portswigger-labs.net/utf-16be/without_proxies/)
+  * [Test](http://portswigger-labs.net/utf-16be/csp/index.php?x=%3Cscript%20src=%22index.php?x=%2509%2500%253D%2500a%2500l%2500e%2500r%2500t%2500(%25001%2500)%2500%253B%2500%252F%2500%252F%22%20charset=%22UTF-16BE%22%3E%3C/script%3E)
+  * [portswigger-labs.net/edge_steal_multiple_undefined_variables/](http://portswigger-labs.net/edge_steal_multiple_undefined_variables/)
+  * [Bypass Same Origin Policy](http://qnimate.com/same-origin-policy-in-nutshell/)
+  * [175281 &ndash; Sandbox flags do not support document.domain control](https://bugs.webkit.org/show_bug.cgi?id=175281)
+  * [277084 - Disallow setting document.domain in sandboxed iframes - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=277084)
+  * [ChromeDOP.pdf](http://www.comp.nus.edu.sg/~tsunami/papers/ChromeDOP.pdf)[147625 - Security: UXSS/SOP bypass with document.write (Chrome on iOS) - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=147625)
+  * [2014_EN_MobileBrowsersSecurityiOS_LukaszPilorzPawelWylecial.key](https://www.syscan.org/slides/2014_EN_MobileBrowsersSecurityiOS_LukaszPilorzPawelWylecial.pdf)
+  * [Continued Adventures with iOS UIWebViews](https://labs.mwrinfosecurity.com/blog/continued-adventures-with-ios-uiwebviews/)
+  * [Continued Adventures with iOS UIWebViews](https://labs.mwrinfosecurity.com/blog/continued-adventures-with-ios-uiwebviews/)
+  * [WebView addJavascriptInterface Remote Code Execution](https://labs.mwrinfosecurity.com/blog/webview-addjavascriptinterface-remote-code-execution/)
+  * [GUILogicSecurity.pdf](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/GUILogicSecurity.pdf)
+  * [326118 - Security: chrome: address bar spoofing in Chrome for iOS - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=326118)
+  * [16/migrated_attachments/2f74d79b701 (1024×768)](https://00e9e64bac24fb818ac3e26824a54ec249cc6bc2d9dcdb8e24-apidata.googleusercontent.com/download/storage/v1/b/monorail-prod.appspot.com/o/16%2Fmigrated_attachments%2F2f74d79b701?qk=AD5uMEv_AbL1NwlVZmEp-VB_OpUCHkO6po7mt4FhIfBvYpYY3B6lC37QKYbcPKyFrymrjUgyP5qkGcWXykFTsZ13rzcx-dRTQvinM2yygkiF4Wpbnu8xpa32OI2r8kdeDm0UkMB-z58_TGsq2ixFMRaclXEIxuqN7t0jOSq7-t8xi9GNnh_EMDcraSSrzf3ZwTTasSl-7GKAfz9f1Ltj4WLOFqSA88RuTcjz-95DbWZU5BnY9BtW6_j6jLcClGuULzcAKgBcWWG4q49nmXEwy65-ADwgFp3uvzOHVxN604MyOPMK2RtbFcx619ZFUswtIlf2q-1c28PQdNb6Wz2n5oOaHBQNxzACb5OyZCbeijrBdtVIP-Nz8-nCc0Gl4tQkd6YgwGE7e3QwUOL2yjFQXDMN9WOEG-4JsTzA-DoixbDvmAfd2i7SgrPjBxw3s_ih_OeYbtvKfACwcist0pJAmsiIRyeaWTF1oJC8PYAzIoBE-tQJxjXdSx7HKpdKFCZIbR6zZMymOGm7Eyz3paIBAk_Y3Umz3CD_y6ZP_RinsGvelvUCM-KGY7RVJnZUWalAWD_mkSjOlrYz5DGGVy5tgiMidMKIbEt9blCiTukxx1rDu6W0eUFdnikXhchOABKbX0Ws6R9wyDLeEEwwleHnGSMTvINrGpxDNWVvv4cNZ69pVDJ-7t_y7IJLJ84uTDxAL8RwVxB4mpX59EfJlaqlaC8K2V7ZuCetbbUFi5i11XjxGh6v_ESenGAeBBusPm34GDGjtL9UACN2)
+  * [326125 - Security: Prompt spoofing in Chrome for iOS - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=326125)
+  * [Full Disclosure: ...because you can't get enough of clickjacking](http://seclists.org/fulldisclosure/2010/Mar/232)
+  * [CVE-2011-3426 - Поиск в Google](https://www.google.com.ua/search?q=CVE-2011-3426&oq=CVE-2011-3426&aqs=chrome..69i57.139j0j7&sourceid=chrome&ie=UTF-8)
+  * [javascript - Ways to circumvent the same-origin policy - Stack Overflow](https://stackoverflow.com/questions/3076414/ways-to-circumvent-the-same-origin-policy)
+  * [Apple Safari SOP bypass (CVE-2015-3753)](http://blog.intothesymmetry.com/2015/08/apple-safari-sop-bypass-cve-2015-3753.html)
+  * [Launching applications using custom browser protocols &ndash; Shotgun Support](https://support.shotgunsoftware.com/hc/en-us/articles/219031308-Launching-applications-using-custom-browser-protocols)
+  * [348640 - Ignore external protocol requests from frames without user action - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=348640)
+  * format webkit/CVE-2018-4204/README.md
+  * format chrome/CVE-2013-6642/README.md
+  * format webkit/CVE-2013-6893
+  * missing exploit for webkit/CVE-2013-7197/README.md
+
+Find CVEs from [domato](https://github.com/google/domato) repo:
+
+> Apple Safari: CVE-2017-2369, CVE-2017-2373, CVE-2017-2362, CVE-2017-2454, CVE-2017-2455, CVE-2017-2459, CVE-2017-2460, CVE-2017-2466, CVE-2017-2471, CVE-2017-2476, CVE-2017-7039, CVE-2017-7040, CVE-2017-7041, CVE-2017-7042, CVE-2017-7043, CVE-2017-7046, CVE-2017-7048, CVE-2017-7049
+> Microsoft Internet Explorer 11: CVE-2017-0037, CVE-2017-0059, CVE-2017-0202, CVE-2017-8594
+> Microsoft Edge: CVE-2017-0037, CVE-2017-8496, CVE-2017-8652, CVE-2017-8644
+> Mozilla Firefox: CVE-2017-5404, CVE-2017-5447, CVE-2017-5465
+> https://www.syscan.org/slides/2014_EN_MobileBrowsersSecurityiOS_LukaszPilorzPawelWylecial.pdf
