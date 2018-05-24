@@ -312,6 +312,7 @@ How to start hacking? You need:
   * format chrome/CVE-2013-6642/README.md
   * format webkit/CVE-2013-6893
   * missing exploit for `webkit/CVE-2013-7197`
+  * Add https://bugs.chromium.org/p/chromium/issues/detail?id=439730
 
 Find CVEs from [domato](https://github.com/google/domato) repo:
 
