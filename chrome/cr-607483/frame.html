@@ -1,0 +1,126 @@
+<script>
+
+  var t = top;
+
+  onload = function () {
+
+    var io = new IntersectionObserver(function () {}, {});
+
+    io.observe(document.getElementById("o1"));
+    io.observe(document.getElementById("o2"));
+
+    Object.defineProperty(Array.prototype, "0", {
+      get: function () {},
+      set: function (v) {
+        var a = document.createElement('a');
+        a.href = 'about:blank';
+        a.click();
+        t.i1.remove();
+      }
+    });
+
+    Object.defineProperty(Array.prototype, "1", {
+      get: function () {},
+      set: function () {
+        arguments[0].constructor.constructor('w', 'w.alert(w.location);')(t.frames[0]);
+      }
+    });
+
+    document.getElementById("o2").scrollIntoView();
+
+  };
+
+</script>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<p>Filler</p>
+<div id=o1>Observed</div>
+<div id=o2>Observed</div>
