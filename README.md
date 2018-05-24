@@ -26,15 +26,16 @@
   - [TODO](#todo)
 
 **Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
+
 > You can extract `js-vuln-db` CVEs to `.html/.js` files using [Scripts](#scripts)
 
 > Demo: https://uxss-db.now.sh
 
 ## Intro
 
-- [What is UXSS?](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/)
-- [What is SOP?](https://en.wikipedia.org/wiki/Same-origin_policy)
-- [What is CORS?](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS)
+* [What is UXSS?](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/)
+* [What is SOP?](https://en.wikipedia.org/wiki/Same-origin_policy)
+* [What is CORS?](https://developer.mozilla.org/ru/docs/Web/HTTP/CORS)
 
 Some CVE ids were not found:
 
@@ -287,7 +288,7 @@ How to start hacking? You need:
   * [portswigger-labs.net/utf-16be/chrome_steal_json_data_with_proxy/index2.html](http://portswigger-labs.net/utf-16be/chrome_steal_json_data_with_proxy/index2.html)
   * [portswigger-labs.net/utf-16be/safari_steal_json_data_with_proxy/](http://portswigger-labs.net/utf-16be/safari_steal_json_data_with_proxy/)
   * [portswigger-labs.net/utf-16be/without_proxies/](http://portswigger-labs.net/utf-16be/without_proxies/)
-  * [Test](http://portswigger-labs.net/utf-16be/csp/index.php?x=%3Cscript%20src=%22index.php?x=%2509%2500%253D%2500a%2500l%2500e%2500r%2500t%2500(%25001%2500)%2500%253B%2500%252F%2500%252F%22%20charset=%22UTF-16BE%22%3E%3C/script%3E)
+  * [Test](<http://portswigger-labs.net/utf-16be/csp/index.php?x=%3Cscript%20src=%22index.php?x=%2509%2500%253D%2500a%2500l%2500e%2500r%2500t%2500(%25001%2500)%2500%253B%2500%252F%2500%252F%22%20charset=%22UTF-16BE%22%3E%3C/script%3E>)
   * [portswigger-labs.net/edge_steal_multiple_undefined_variables/](http://portswigger-labs.net/edge_steal_multiple_undefined_variables/)
   * [Bypass Same Origin Policy](http://qnimate.com/same-origin-policy-in-nutshell/)
   * [175281 &ndash; Sandbox flags do not support document.domain control](https://bugs.webkit.org/show_bug.cgi?id=175281)
