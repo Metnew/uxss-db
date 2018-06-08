@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "gnome-calculator launcher",
+  "version": "1",
+  "permissions": ["downloads", "downloads.open", "downloads.shelf", "debugger"],
+  "options_page": "main.html",
+  "background": {
+  	"scripts": ["background.js"]
+  }
+}

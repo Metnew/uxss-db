@@ -1,0 +1,22 @@
+<body onbeforeunload="dostuff()">
+    <div id='pg1'>
+        <a href='https://accounts.google.com:1234/'>Drag me into the address bar!</a>
+    </div>
+    <div id='pg2' style="display: none">
+        <h1>Welcome to Bob's Totally Legitimate Google Login Page</h1>
+        <p>
+            <span style="width: 20ex; display: inline-block">Login:</span>
+            <input type=text>
+            <br>
+            <span style="width: 20ex; display: inline-block">Password:</span>
+            <input type=password>
+            <p>
+                <input type=submit>
+    </div>
+
+    <script>
+        function dostuff() {
+            document.getElementById('pg1').style.display = 'none';
+            setTimeout("document.getElementById('pg2').style.display = 'block'", 1000);
+        }
+    </script>

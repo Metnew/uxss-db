@@ -1,0 +1,64 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [4 0 R]
+>>
+endobj
+3 0 obj
+<<
+/Type /Annot
+/Rect [0 0 400 200]
+/Border [0 0 0]
+/Subtype /Link
+/A
+  <<
+  /S /URI
+  /URI (file:///tmp)
+  >>
+>>
+endobj
+4 0 obj
+<<
+/Parent 2 0 R
+/Contents 6 0 R
+/Type /Page
+/Resources 5 0 R
+/MediaBox [0 0 400 200]
+/Annots [3 0 R]
+>>
+endobj
+5 0 obj
+<<
+/Font
+  <<
+  /F1
+    <<
+    /Type /Font
+    /Subtype /Type1
+    /BaseFont /Arial
+    >>
+  >>
+>>
+endobj
+6 0 obj
+<</Length 58>>
+stream
+BT/F1 20 Tf 66 99 Td(Press Ctrl and click anywhere.) Tj ET
+endstream
+endobj
+trailer
+<<
+/Root 1 0 R
+/Size 7
+>>
+startxref
+791
+%%EOF

@@ -1,0 +1,16 @@
+{
+    "name": "Intercepting <script>",
+    "version": "1",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "permissions": [
+        "webRequest",
+        "webRequestBlocking",
+        "https://chrome-devtools-frontend.appspot.com/*"
+    ],
+    "web_accessible_resources": [
+        "exploit.html"
+    ]
+}

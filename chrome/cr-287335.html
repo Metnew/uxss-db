@@ -1,0 +1,11 @@
+<html>
+<script>
+var open = window.indexedDB.open("MyDatabase", 1);
+open.onsuccess = function() {
+    var db = open.result;
+    var tx = db.transaction("MyObjectStore", "readwrite");
+    var store = tx.objectStore("MyObjectStore");
+    store.openCursor();
+}
+</script>
+</html>

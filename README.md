@@ -5,6 +5,7 @@
 
 - [uxss-db 🔪](#uxss-db)
   - [Intro](#intro)
+      - [/unsorted](#unsorted)
   - [Webkit](#webkit)
   - [Chrome](#chrome)
   - [IE/Edge](#ie-edge)
@@ -44,6 +45,10 @@ Some CVE ids were not found:
 * **some-bug** - vuln don't have CVE or CVE is unknown
 
 _Version field has "?" symbol, if detailed version wasn't attached to the report_
+
+#### /unsorted
+
+*NOTE: Not all CVEs listed in tables below! Check `/unsorted` dir also.*
 
 ## Webkit
 
@@ -313,6 +318,12 @@ How to start hacking? You need:
   * format webkit/CVE-2013-6893
   * missing exploit for `webkit/CVE-2013-7197`
   * Add https://bugs.chromium.org/p/chromium/issues/detail?id=439730
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=711020
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=682020
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=668724
+  * https://bugs.chromium.org/p/chromium/issues/detail?id=669086
+  * https://leucosite.com/Chrome-Firefox-Edge-Local-File-Disclosure/
+  * https://bugzilla.mozilla.org/show_bug.cgi?id=1164397
 
 Find CVEs from [domato](https://github.com/google/domato) repo:
 

