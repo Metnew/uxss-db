@@ -1,6 +1,6 @@
 # UXSS via Document::prepareForDestruction and CachedFrame
 
-### Reported by lokihardt@google.com, Mar 3 2017
+> Reported by lokihardt@google.com, Mar 3 2017
 
 Here's a snippet of Document::prepareForDestruction
 

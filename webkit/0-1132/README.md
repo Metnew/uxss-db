@@ -1,6 +1,6 @@
 # UXSS: the patch of #1110 made another bug
 
-### Reported by <lokihardt@google.com>, Feb 16 2017
+> Reported by <lokihardt@google.com>, Feb 16 2017
 
 Here's the patch of #1110.
 https://trac.webkit.org/changeset/212218/trunk/Source/WebCore/dom/ContainerNode.cpp

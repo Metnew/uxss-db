@@ -1,6 +1,6 @@
 # UXSS via operationSpreadGeneric
 
-### Reported by lokihardt@google.com, Jan 20 2017
+> Reported by lokihardt@google.com, Jan 20 2017
 
 Once a spread operation is optimized, the function |operationSpreadGeneric| will be called from then on. But operationSpreadGeneric's trying to get a JSGlobalObject from the argument of a spread operation.
 

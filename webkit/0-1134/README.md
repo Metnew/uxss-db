@@ -1,6 +1,6 @@
 # UXSS via ContainerNode::parserRemoveChild (2)
 
-### Reported by lokihardt@google.com, Feb 17 2017
+> Reported by lokihardt@google.com, Feb 17 2017
 
 Here's a snippet of `ContainerNode::parserRemoveChild`.
 

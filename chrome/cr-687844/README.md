@@ -1,6 +1,6 @@
 # window.external leaks global object + allows cross origin script access
 
-#### Reported by <mailto:esprehn@chromium.org>, Feb 2 2017
+> Reported by <mailto:esprehn@chromium.org>, Feb 2 2017
 
 We use a [static local for the External object](<https://cs.chromium.org/chromium/src/third_party/WebKit/Source/core/frame/DOMWindow.cpp?type=cs&q=%22external()%22+file:webkit&l=116>)
 

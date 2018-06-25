@@ -1,6 +1,6 @@
 # UXSS via CachedFrameBase::restore
 
-### Reported by lokihardt@google.com, Mar 17 2017
+> Reported by lokihardt@google.com, Mar 17 2017
 
 This is similar to the case https://bugs.chromium.org/p/project-zero/issues/detail?id=1151.
 But this time, javascript handlers may be fired in `FrameLoader::open`.

@@ -1,6 +1,6 @@
 # Comodo "Chromodo" Browser disables same origin policy, Effectively turning off web security
 
-#### Reported by taviso@google.com, Jan 22 2016
+> Reported by taviso@google.com, Jan 22 2016
 
 When you install Comodo Internet Security, by default a new browser called Chromodo is installed and set as the default browser. Additionally, all shortcuts are replaced with Chromodo links and all settings, cookies, etc are imported from Chrome. They also hijack DNS settings, among other shady practices.
 

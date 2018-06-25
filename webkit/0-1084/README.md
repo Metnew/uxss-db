@@ -1,6 +1,6 @@
 # UXSS via PrototypeMap::createEmptyStructure
 
-### Reported by lokihardt@google.com, Jan 17 2017
+> Reported by lokihardt@google.com, Jan 17 2017
 
 When creating an object in Javascript, its `Structure` is created with the constructor's prototype's `VM`.
 

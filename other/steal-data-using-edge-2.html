@@ -1,0 +1,8 @@
+<script>
+    Object.setPrototypeOf(__proto__, new
+        Proxy(__proto__, {
+            has: function (target, name) {
+                alert(name);
+            }
+        }));
+</script>

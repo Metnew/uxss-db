@@ -1,6 +1,6 @@
 # Cross-origin object leak via fetch
 
-### Reported by pim...@live.nl, Oct 15 2016
+> Reported by pim...@live.nl, Oct 15 2016
 
 VULNERABILITY DETAILS
 The promise returned by `fetch.call(crossOriginWindow)` is created in the cross-origin context. Direct cross-origin scripting is not possible because cross-origin function constructors don't work anymore ( issue 541703 ). But the attacker can e.g. call other functions of the cross-origin page.
