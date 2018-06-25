@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="sandbox; report-uri /csp/log.php">
+</head>
+
+<body>
+    <script>
+        console.log('tight');
+        alert(1);
+    </script>
+    <iframe srcdoc="srcdoc:&lt;script>console.log('tight srcdoc');&lt;/script>worked?"></iframe>
+    <iframe src="data:text/html,data:&lt;script>console.log('tight data');&lt;/script>worked?"></iframe>
+    <iframe s#rc="tight.php"></iframe>
+    <a href="javascript:console.log('js')">js</a>
+    <a href="data:text/html,data:&lt;script>alert(document.domain);&lt;/script>worked?">datalink</a>
+</body>
+
+</html>
