@@ -15,3 +15,6 @@ data:text/html,<a href='chrome://inducebrowsercrashforrealz'>drag me into the ad
 Not sure if this matters in practice, but seems like a simple fix, so creating a bug just in case.
 
 Link: https://bugs.chromium.org/p/chromium/issues/detail?id=149877
+
+
+http://lcamtuf.coredump.cx/whack/ - cross-browser :(
