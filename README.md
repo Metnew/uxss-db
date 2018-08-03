@@ -29,7 +29,7 @@
 
 > You can extract `js-vuln-db` CVEs to `.html/.js` files using [Scripts](#scripts)
 
-> Demo: https://uxss-db.now.sh
+> Demo(sometimes down): https://uxss-db.now.sh
 
 ## Intro
 
@@ -47,7 +47,7 @@ _Version field has "?" symbol, if a version wasn't attached to the report_
 
 **NOTE: Many CVEs aren't listed in the tables below!** 
 
-*Check `/other` folder = unsorted/unknown/duplicated CVEs and CVEs for less popular browsers*
+*Check `/other` folder = unsorted/unknown/duplicated CVEs and vulnerabilities for less popular browsers*
 
 ## Webkit
 
@@ -176,13 +176,7 @@ _Version field has "?" symbol, if a version wasn't attached to the report_
 
 * [How Chromium Displays Web Pages](https://www.chromium.org/developers/design-documents/displaying-a-web-page-in-chrome)
 * [Chromium: Multi-process Architecture](https://www.chromium.org/developers/design-documents/multi-process-architecture)
-* [Plz Navigate: Browser-side navigation in Chrome](https://docs.google.com/document/d/1cSW8fpJIUnibQKU8TMwLE5VxYZPh4u4LNu_wtkok8UE/edit?pref=2&pli=1#)
-* [PlzNavigate: Navigation failure](https://docs.google.com/document/d/1AD1gkOO9yTuNwnNptczdlMgktoMdl0LssDbv1ECx5Co/edit#heading=h.8e8hcr1fxzjg)
-* [PlzNavigate: Speculative renderer creation](https://docs.google.com/document/d/1d3NhCFK79imXBO_S-qN16XYLS1zC5hkvL7nQclxnKP8/edit#heading=h.vno6gjwj078r)
 * [Site Isolation Design Document](https://www.chromium.org/developers/design-documents/site-isolation)
-* [Site Isolation Summit - Chromium Changes](https://docs.google.com/presentation/d/1e25K7BW3etNDm1-lkMltMcCcRDeVwLibBcbACRhqZ1k/edit#slide=id.g6ddda684b_09)
-* [Site Isolation Summit 2015](https://docs.google.com/presentation/d/10HTTK4dsxO5p6FcpEOq8EkuV4yiBx2n6dBki8cqDWyo/edit#slide=id.g6ddc3db7f_050)
-* [Site Isolation Summit - Blink Changes](https://docs.google.com/presentation/d/11nrXiuXBTC72E5l_MUtu2eJN6rcW9PtBewDOPPTk9Bc/edit#slide=id.g6dded9be5_073)
 * [Threading and Tasks in Chrome](https://chromium.googlesource.com/chromium/src/+/master/docs/threading_and_tasks.md)
 * [Important Abstractions and Data Structures](https://www.chromium.org/developers/coding-style/important-abstractions-and-data-structures)
 
@@ -209,12 +203,13 @@ _Version field has "?" symbol, if a version wasn't attached to the report_
 ## Misc
 
 * [NodeFuzz](https://code.google.com/archive/p/ouspg/wikis/NodeFuzz.wiki) - web browser fuzzer
-* [Muon](https://github.com/brave/muon) - Build browsers and browser like applications with HTML, CSS, and JavaScript
+* [brave/Muon](https://github.com/brave/muon) - Build browsers and browser like applications with HTML, CSS, and JavaScript (part of the Brave's bug bounty)
 * https://ios.browsr-tests.com - list of SOP bypasses in iOS
 * https://github.com/rafaybaloch/SOP-Bypass-Mini-Test-Suite - list of SOP bypasses
 * [ref_fuzz](https://lcamtuf.blogspot.com/2010/06/announcing-reffuzz-2yo-fuzzer.html) fuzzer - [source code](http://lcamtuf.coredump.cx/ref_fuzz5.html)
 * [javascript - Ways to circumvent the same-origin policy - Stack Overflow](https://stackoverflow.com/questions/3076414/ways-to-circumvent-the-same-origin-policy) - document.domain, window.postMessage, CORS, reverse proxy( + jsonp)
 * Slides about cookie security - [Cookie same origin policy](https://crypto.stanford.edu/cs142/lectures/10-cookie-security.pdf)
+* [PortSwigger/hackability](https://github.com/PortSwigger/hackability) - "Devtools" for browser security. (useful for less known browsers)
 
 
 ## Scripts
@@ -236,11 +231,7 @@ MIT
 
 ## TODO
 
-* RESOLVE THESE LINKS AND START USING ISSUES!
-* Introduce unified way to trigger exploit where it's possible: `window.onclick` / `<button id="X">Click me</button>`
-* Add "Firefox" table in `README.md`
 * Add these bugs:
-  * https://blog.jeremiahgrossman.com/2006/08/i-know-where-youve-been.html
   * [Pwn2Own: content: scheme allows cross-origin info leaks](https://bugs.chromium.org/p/chromium/issues/detail?id=659489)
   * [Use-after free in leveldb](https://bugs.chromium.org/p/chromium/issues/detail?id=88944)
   * [Security: UaF in MidiHost round 2 (JS -> Browser code execution)](https://bugs.chromium.org/p/chromium/issues/detail?id=576383)
@@ -254,7 +245,6 @@ MIT
   * http://unsafe.cracking.com.ar/demos/edgedatametadata/bing.html
   * [CVE-2016-9079: Use-after-free in SVG Animation](https://bugzilla.mozilla.org/show_bug.cgi?id=1321066)
   * https://bugs.chromium.org/p/chromium/issues/detail?id=666246
-  * https://trac.torproject.org/projects/tor/ticket/20772
   * http://www.cracking.com.ar/demos/workerleak/
   * http://www.cracking.com.ar/demos/xmldom/
   * http://unsafe.cracking.com.ar/demos/sandboxedge/
@@ -263,33 +253,15 @@ MIT
   * http://browser-shredders.blogspot.com/2014/06/cve-not-yet-assigned-opera-coast-ssl.html
   * [Bypassing the Same Origin Policy - The Browser Hacker&rsquo;s Handbook (2014)](http://apprize.info/security/browser/5.html)
   * [438085 - Security: SOP bypass via DNS-Rebind (including PoC) - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=438085)
-  * [Chrome XSS Bypass - Brute XSS](https://brutelogic.com.br/blog/chrome-xss-bypass/)
   * [same origin policy problems](http://www.securitylearn.net/tag/same-origin-policy-problems/)
   * [demonic_browsers.pdf](https://research.aurainfosec.io/assets/demonic_browsers.pdf)
   * [lcamtuf's blog: Yeah, about that address bar thing...](https://lcamtuf.blogspot.com/2010/06/yeah-about-that-address-bar-thing.html)
-  * [Multiple Browsers Fake url folder & file Same origin Spoof](http://lostmon.blogspot.com/2009/08/multiple-browsers-fake-url-folder-file.html)
-  * [lcamtuf's blog: The curse of inverse strokejacking](https://lcamtuf.blogspot.com/2010/06/curse-of-inverse-strokejacking.html)
-  * [lcamtuf.coredump.cx/webkit-focus/](http://lcamtuf.coredump.cx/webkit-focus/)
-  * [lcamtuf's blog: Safari: a tale of betrayal and revenge](https://lcamtuf.blogspot.com/2010/06/safari-tale-of-betrayal-and-revenge.html)
   * [Full Disclosure: ...because you can't get enough of clickjacking](http://seclists.org/fulldisclosure/2010/Mar/232)
   * [JSON hijacking for the modern web | Blog](https://portswigger.net/blog/json-hijacking-for-the-modern-web)
-  * [portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/](http://portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/)
-  * [portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/index2.html](http://portswigger-labs.net/jsproxy/edge_proxy_undefined_variable_read/index2.html)
-  * [portswigger-labs.net/utf-16be/edge_steal_json_data_with_proxy/index2.php](http://portswigger-labs.net/utf-16be/edge_steal_json_data_with_proxy/index2.php)
-  * [portswigger-labs.net/utf-16be/chrome_steal_json_data_with_proxy/index2.html](http://portswigger-labs.net/utf-16be/chrome_steal_json_data_with_proxy/index2.html)
-  * [portswigger-labs.net/utf-16be/safari_steal_json_data_with_proxy/](http://portswigger-labs.net/utf-16be/safari_steal_json_data_with_proxy/)
-  * [portswigger-labs.net/utf-16be/without_proxies/](http://portswigger-labs.net/utf-16be/without_proxies/)
-  * [portswigger-labs.net/edge_steal_multiple_undefined_variables/](http://portswigger-labs.net/edge_steal_multiple_undefined_variables/)
-  * [Bypass Same Origin Policy](http://qnimate.com/same-origin-policy-in-nutshell/)
-  * [Continued Adventures with iOS UIWebViews](https://labs.mwrinfosecurity.com/blog/continued-adventures-with-ios-uiwebviews/)
-  * [WebView addJavascriptInterface Remote Code Execution](https://labs.mwrinfosecurity.com/blog/webview-addjavascriptinterface-remote-code-execution/)
   * [Pwnfest 2016 meta bug](https://bugs.chromium.org/p/chromium/issues/detail?id=664551)
-  * [Full Disclosure: ...because you can't get enough of clickjacking](http://seclists.org/fulldisclosure/2010/Mar/232)
-  * [Apple Safari SOP bypass (CVE-2015-3753)](http://blog.intothesymmetry.com/2015/08/apple-safari-sop-bypass-cve-2015-3753.html)
   * format webkit/CVE-2018-4204/README.md
   * missing exploit for `webkit/CVE-2013-7197`
   * https://bugs.chromium.org/p/chromium/issues/detail?id=439730
-  * https://bugs.chromium.org/p/chromium/issues/detail?id=711020
   * https://bugs.chromium.org/p/chromium/issues/detail?id=682020
   * https://bugs.chromium.org/p/chromium/issues/detail?id=668724
-  * https://bugs.chromium.org/p/chromium/issues/detail?id=669086
+  * https://blog.jeremiahgrossman.com/2006/08/i-know-where-youve-been.html - that web 1.0 thing
