@@ -17,6 +17,7 @@
     - [Brave](#brave)
     - [Chromium](#chromium)
     - [Webkit](#webkit)
+    - [Electron](#electron)
   - [Specs](#specs)
   - [Bounties](#bounties)
   - [Misc](#misc)
@@ -152,6 +153,7 @@ _Version field has "?" symbol, if a version wasn't attached to the report_
 * [A Security Study of Chrome’s Process-based Sandboxing](http://www.comp.nus.edu.sg/~tsunami/papers/ChromeDOP.pdf)
 * [A Systematic Approach to Uncover Security Flaws in GUI Logic](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/GUILogicSecurity.pdf)
 * [JSON hijacking](https://www.owasp.org/images/6/6a/OWASPLondon20161124_JSON_Hijacking_Gareth_Heyes.pdf)
+* [Bypassing the Same Origin Policy - The Browser Hacker&rsquo;s Handbook (2014)](http://apprize.info/security/browser/5.html)
 
 ## Browser hacking guides and design docs
 
@@ -184,6 +186,12 @@ _Version field has "?" symbol, if a version wasn't attached to the report_
 
 * [Core WebKit Classes](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/DisplayWebContent/Concepts/WebKitDesign.html)
 * [Webkit docs on developer.apple.com](https://developer.apple.com/documentation/webkit)
+
+### Electron
+
+* [Modern Alchemy: Turning XSS into RCE](https://blog.doyensec.com/2017/08/03/electron-framework-security.html)
+* [Electron Security Checklist ](https://www.blackhat.com/docs/us-17/thursday/us-17-Carettoni-Electronegativity-A-Study-Of-Electron-Security-wp.pdf)
+
 
 ## Specs
 
@@ -235,33 +243,17 @@ MIT
   * [Pwn2Own: content: scheme allows cross-origin info leaks](https://bugs.chromium.org/p/chromium/issues/detail?id=659489)
   * [Use-after free in leveldb](https://bugs.chromium.org/p/chromium/issues/detail?id=88944)
   * [Security: UaF in MidiHost round 2 (JS -> Browser code execution)](https://bugs.chromium.org/p/chromium/issues/detail?id=576383)
-  * https://xisigr.com/x/cve-2015-3755/
   * https://bugs.chromium.org/p/chromium/issues/detail?id=419383
-  * https://bugs.chromium.org/p/chromium/issues/detail?id=380885 - https://www.christian-schneider.net/ChromeSopBypassWithSvg.html
   * https://github.com/mpgn/ByP-SOP
-  * https://blog.doyensec.com/2017/08/03/electron-framework-security.html
-  * http://blog.intothesymmetry.com/2015/08/apple-safari-sop-bypass-cve-2015-3753.html
-  * https://www.cracking.com.ar/demos/edgespoof/3/
   * http://unsafe.cracking.com.ar/demos/edgedatametadata/bing.html
-  * [CVE-2016-9079: Use-after-free in SVG Animation](https://bugzilla.mozilla.org/show_bug.cgi?id=1321066)
   * https://bugs.chromium.org/p/chromium/issues/detail?id=666246
   * http://www.cracking.com.ar/demos/workerleak/
   * http://www.cracking.com.ar/demos/xmldom/
   * http://unsafe.cracking.com.ar/demos/sandboxedge/
-  * https://www.cracking.com.ar/demos/sop-ax-htmlfile/injectiframexdom.html !!
-  * http://browser-shredders.blogspot.com/
-  * http://browser-shredders.blogspot.com/2014/06/cve-not-yet-assigned-opera-coast-ssl.html
-  * [Bypassing the Same Origin Policy - The Browser Hacker&rsquo;s Handbook (2014)](http://apprize.info/security/browser/5.html)
+  * https://www.cracking.com.ar/demos/sop-ax-htmlfile/injectiframexdom.html
   * [438085 - Security: SOP bypass via DNS-Rebind (including PoC) - chromium - Monorail](https://bugs.chromium.org/p/chromium/issues/detail?id=438085)
-  * [same origin policy problems](http://www.securitylearn.net/tag/same-origin-policy-problems/)
   * [demonic_browsers.pdf](https://research.aurainfosec.io/assets/demonic_browsers.pdf)
-  * [lcamtuf's blog: Yeah, about that address bar thing...](https://lcamtuf.blogspot.com/2010/06/yeah-about-that-address-bar-thing.html)
-  * [Full Disclosure: ...because you can't get enough of clickjacking](http://seclists.org/fulldisclosure/2010/Mar/232)
   * [JSON hijacking for the modern web | Blog](https://portswigger.net/blog/json-hijacking-for-the-modern-web)
   * [Pwnfest 2016 meta bug](https://bugs.chromium.org/p/chromium/issues/detail?id=664551)
-  * format webkit/CVE-2018-4204/README.md
-  * missing exploit for `webkit/CVE-2013-7197`
-  * https://bugs.chromium.org/p/chromium/issues/detail?id=439730
   * https://bugs.chromium.org/p/chromium/issues/detail?id=682020
-  * https://bugs.chromium.org/p/chromium/issues/detail?id=668724
   * https://blog.jeremiahgrossman.com/2006/08/i-know-where-youve-been.html - that web 1.0 thing
