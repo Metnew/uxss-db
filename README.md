@@ -28,9 +28,11 @@
 
 **Inspired by [`js-vuln-db`](https://github.com/tunz/js-vuln-db)**
 
+For **memory** bugs, exploits and other: check [`awesome-browser-exploit`](https://github.com/Escapingbug/awesome-browser-exploit)
+
 > You can extract `js-vuln-db` CVEs to `.html/.js` files using [Scripts](#scripts)
 
-> Demo(sometimes down): https://uxss-db.now.sh
+> Demo: https://uxss-db.now.sh
 
 ## Intro
 
