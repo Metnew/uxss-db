@@ -84,6 +84,7 @@ _Version field has "?" symbol, if a version wasn't attached to the report_
 
 | CVE/id                                                  | title                                                                          | version     | date        |
 | ------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------- | ----------- |
+| [CVE-2018-6128](./chrome/CVE-2018-6128)                 | UXSS via URL parsing bug                                                          | 66          | May 9 2018  |
 | [CVE-2017-5124](https://github.com/Bo0oM/CVE-2017-5124) | UXSS with MHTML                                                                | 61          | Oct 20 2017 |
 | [cr-687844](./chrome/cr-687844)                         | `window.external` leaks global object + cross origin script access             | 57          | Feb 2 2017  |
 | [CVE-2017-5007](./chrome/CVE-2017-5007)                 | UXSS through bypassing `ScopedPageSuspender` with closing windows              | 55          | Dec 5 2016  |
