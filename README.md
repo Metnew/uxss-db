@@ -32,8 +32,6 @@ For **memory** bugs, exploits and other: check [`awesome-browser-exploit`](https
 
 > You can extract `js-vuln-db` CVEs to `.html/.js` files using [Scripts](#scripts)
 
-> Demo: https://uxss-db.now.sh
-
 ## Intro
 
 * [What is UXSS?](https://www.acunetix.com/blog/articles/universal-cross-site-scripting-uxss/)
